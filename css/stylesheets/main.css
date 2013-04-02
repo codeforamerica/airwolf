@@ -17,3 +17,8 @@ body {
 .sideRight ul {
   padding: 5px;
 }
+
+/* line 17, ../sass/main.scss */
+.well-special {
+  padding: 8px 0px;
+}
