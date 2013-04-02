@@ -3,22 +3,27 @@ body {
   font-family: Helvetica, arial, sans-serif;
 }
 
-/* line 5, ../sass/main.scss */
+/* line 6, ../sass/main.scss */
+label {
+  display: inline;
+}
+
+/* line 10, ../sass/main.scss */
 .sideRight {
   border: #eee solid 1px;
 }
-/* line 7, ../sass/main.scss */
+/* line 12, ../sass/main.scss */
 .sideRight h3 {
   background: #eee;
   margin: 0px;
   padding: 5px;
 }
-/* line 12, ../sass/main.scss */
+/* line 17, ../sass/main.scss */
 .sideRight ul {
   padding: 5px;
 }
 
-/* line 17, ../sass/main.scss */
+/* line 22, ../sass/main.scss */
 .well-special {
   padding: 8px 0px;
 }
