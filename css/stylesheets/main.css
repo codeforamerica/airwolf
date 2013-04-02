@@ -2,3 +2,18 @@
 body {
   font-family: Helvetica, arial, sans-serif;
 }
+
+/* line 5, ../sass/main.scss */
+.sideRight {
+  border: #eee solid 1px;
+}
+/* line 7, ../sass/main.scss */
+.sideRight h3 {
+  background: #eee;
+  margin: 0px;
+  padding: 5px;
+}
+/* line 12, ../sass/main.scss */
+.sideRight ul {
+  padding: 5px;
+}

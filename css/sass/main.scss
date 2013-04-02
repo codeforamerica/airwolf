@@ -1,3 +1,15 @@
 body {
 	font-family: Helvetica, arial, sans-serif;
 }
+
+.sideRight {
+	border: #eee solid 1px;
+	h3 {
+		background:#eee;
+		margin: 0px;
+		padding: 5px
+	}
+	ul{
+		padding: 5px;
+	}
+}
