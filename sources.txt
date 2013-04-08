@@ -1,0 +1,4 @@
+## Sources (internal use only)
+- [basic info](http://www.sfhsa.org/158.htm)
+- [paper applications](http://www.dss.cahwnet.gov/foodstamps/)
+- [required documents](https://www.mybenefitscalwin.org/web/consortium/help?p_auth=PGyMB144&p_p_id=help_WAR_calwinportlet&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_help_WAR_calwinportlet_javax.portlet.action=getCategoryContent&categoryName=CalFresh%20Required%20Documents&parentCategory=CalFresh%20%28formerly%20Food%20Stamps%29&tabSelected=Frequently%20Asked%20Questions)
