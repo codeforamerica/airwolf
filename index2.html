@@ -258,7 +258,6 @@
 		
   </body>
   <script>
-
   	$(function() {
 	  	$('#navbarExample').scrollspy()
 			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
@@ -283,7 +282,6 @@
 				$('#navbarExample>ul>li').removeClass('active');
 	    	$(this).parent('li').addClass('active');
 	    });
-	  	$('#navbarExample li').first().addClass('active');
 		});
   </script>
   <script>
@@ -295,5 +293,17 @@
   ga('create', 'UA-40052704-1', 'github.io');
   ga('send', 'pageview');
 
+</script>
+
+<script>
+/*
+	Yes smart guy this is an MVP. Really just trying to prove it. Checkout this hack!! It took
+	5 minutes to write. Need it because for some reason the last item in the nav list was automatically 
+	getting selected on page load. Dunno why, but this kills it.
+*/
+	window.setTimeout(function(){
+		$('#navbarExample>ul>li').removeClass('active');
+		$('#navbarExample li').first().addClass('active');
+	}, 55);
 </script>
 </html>
