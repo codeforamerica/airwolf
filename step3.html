@@ -23,20 +23,49 @@
 		      <div class="well well-special">
 					  <ul class="nav nav-list">
 					  	<li class="nav-header">Application steps</li>
-					    <li><a href="step1.html" >Step 1 Applying</a></li>
-					    <li><a href="step2.html">Step 2 Interview</a></li>
-					    <li class="active"><a href="step3.html">Step 3 Decision</a></li>
-					    <li><a href="checklist.html">Checklist</a></li>
+					    <li><a href="step1.html" >Step 1 Prepare</a></li>
+					    <li><a href="step2.html">Step 2 Apply</a></li>
+					    <li class="active"><a href="step3.html">Step 3 Send documents</a></li>
+					    <li><a href="questions.html">Questions</a></li>
+					    <!-- <li><a href="checklist.html">Checklist</a></li> -->
 					  </ul>
 					</div>
 		    </div>
 		    <div class="span6">
-            <h2>Step 3</h2>
-            <a href="step2.html" class="btn btn-default"><< Step 2</a><a href="checklist.html" class="btn btn-primary pull-right">Checklist</a>
+            <h2>Step 3: Send documents</h2>
+            <p>Now we're going to <b>scan</b> and <b>email</b> your documents to our office:</p>
+            <div class="row">
+            	<!-- Documents -->
+	            <ul class="offset1 unstyled">
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>ID</b>, like a drivers license or passport</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof of <b>residence</b> in San Francisco, like a driver's license or bill</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof of all <b>income</b> for the past 30 days, like wage stubs</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Receipts</b> for rent, utilities, medical bills, and child support payments</label></li>
+	            </ul>
+            </div>
+            <p><b>Scan</b> or take <b>pictures</b> of these documents using your phone. Put them into one big email, and send the email to: <a href="mailto:food@sfgov.org">food@sfgov.org</a></p>
+
+            <p>In the body of the email, you can say:
+            	<blockquote>Hello,<br>
+            		I have attached my verification documents for my CalFresh application.<br>
+            		My name is <b>[PUT NAME HERE]</b><br>
+            		My confirmation number is <b>[PUT CONFIRMATION NUMBER HERE]</b><br>
+
+            	</blockquote>
+
+            <a href="step4.html" class="btn btn-primary pull-right">Step 4 ></a>
 		    </div>
+		    
 		    <div class="span3">
 		      <!--Sidebar content-->
-		      <div class="well well-special">
+		      <!-- <div class="well well-special">
 					  <ul class="nav nav-list">
 					  	<li class="nav-header">Important info</li>
 					    <li><a href="#">Address</a></li>
@@ -44,7 +73,31 @@
 					    <li><a href="#">Apply!</a></li>
 					  </ul>
 					</div>
-		    </div>
+		    </div> -->
+		  </div>
+		</div>
+		
+		<!-- ID Modal -->
+		<div id="id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="incomeLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+		    <h3 id="incomeLabel">Identification</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>If you don't have a drivers license, that's okay. You can bring any ONE of these instead:</p>
+		    <ul>
+		    	<li>Birth certificate</li>
+		    	<li>Driver's license</li>
+		    	<li>Voter registration card</li>
+		    	<li>School records</li>
+		    	<li>U.S. Passport</li>
+		    </ul>
+		  </div>
+
+
+		
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 		  </div>
 		</div>
   </body>
