@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <link href="css/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+	  <link href="css/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<link href="css/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <!--[if IE]>
+	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <![endif]-->
+  </head>
+  <body>
+  	<div class="navbar">
+		  <div class="navbar-inner">
+		    <a class="brand" href="index.html">CalFresh helper</a>
+		  </div>
+		</div><!-- end nav-bar-->
+		<div class="container-fluid">
+		  <div class="row-fluid">
+		    <div class="span2">
+		      <!--Sidebar content-->
+		      <div class="well-special fixed">
+						<div id="navbarExample" class="subnav">
+		        	<ul class="nav nav-pills">
+		        		<li class="active"><a href="#step1">Step 1 Prepare</a></li>
+								<li><a href="#step2">Step 2 Apply</a></li>
+						    <li><a href="#step3">Step 3 Email documents</a></li>
+						    <li><a href="#step4">Step 4 Interview</a></li>
+						    <li><a href="#next">What's next?</a></li>
+						    <li><a href="#questions">Questions</a></li>
+			        </ul>
+			    	</div>
+					</div>
+		    </div>
+		    <div class="span6" data-spy="scroll" data-target="#navbarExample" data-offset="0">
+		    	<div class="well" id="step1">
+	          <h2>Step 1: Prepare</h2>
+	          <!-- <div class="alert">
+	          	<p>Important!</p>
+	          	<p>If you are enrolled in Medi-Cal or Cal-Works, you may have a different applicationprocess. Call (510) 123-4566 for Medi-Cal or (510) 890-1234</p>
+	          </div> -->
+	          <p>Before you start applying, you'll </b>need</b> to get a few things together:</p>
+	          <!-- <ul>
+	          	<li><b>Identification</b>, like a drivers license or passport <a href="#id" role="button" class="btn" data-toggle="modal">?</a></li>
+	          	<li>Proof of <b>residence</b> in San Francisco, like a driver's license or bill</li>
+	          	<li>Proof of all <b>income</b> for the past 30 days, like wage stubs and checks</li>
+	          	<li>The <b>Social Security Numbers (SSNs)</b> for everyone who lives in your house who you buy and cook food with.</li>
+	          	<li><b>Receipts</b> for rent, utilities, medical bills, and child support payments</li>
+	          </ul> -->
+	          <div class="row">
+	          	<!-- Documents -->
+	            <ul class="offset1 unstyled">
+	            	<!-- <li><h5>Things you need</h5></li> -->
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>ID</b>, like a drivers license or passport</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof that you <b>live in San Francisco</b>, like a driver's license or bill</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof of all <b>income</b> for the past 30 days, like wage stubs</label></li>
+
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Social Security Numbers (SSNs)</b> for everyone who lives in your house that you buy and cook food with</label></li>
+
+	            </ul>
+	          </div>
+
+	          <p>A few more things will be <b>helpful</b>, but you don't need them:</p>
+	          <div class="row">
+	          	<!-- Info -->
+	            <ul class="offset1 unstyled">
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Email</b> address (<a href="https://accounts.google.com/SignUp?service=mail">click here to get one for free</a>)</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Scanner</b> or <b>camera phone</b></label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Receipts</b> for rent, utilities, medical bills, and child support payments</label></li>
+	            </ul>
+	          </div>
+
+	          <!-- <a href="step2.html" class="btn btn-primary pull-right">Step 2 ></a> -->
+	          </div> <!-- end well -->
+	          <div class="well" id="step2">
+		          	<h2>Step 2: Apply</h2>
+		            <p>The easiest way to apply is <b>online</b> at <a href="https://www.mybenefitscalwin.org/">My Benefits CalWin.</a> This part will take about 30 minutes. Here's how:</p>
+		            <ol>
+		            	<li>Get an <b>email address</b> (<a href="">click here for a free one</a>)
+		            	<li><a href="https://www.mybenefitscalwin.org/mbp/create/personalinfo.htm?county=38">Create a My Benefits CalWin account</a></li>
+		            		<p>You will have to fill out your name, password, a few security questions, and email address. You do not have to enter your Social Security Number quite yet. You can ignore the confirmation email.</p>
+		            	<li><a href="https://www.mybenefitscalwin.org/web/consortium/signin">Sign in and <b>Apply for Benefits</b></a></li>
+		            	<p>Click Apply for Benefits at the bottom of the page. Follow the screens until you get to the People section where you enter your own information.
+		            		<!-- what to expect, terms agreement > click Food Assistance (CalFresh) checkbox at the bottom > click Continue
+		            		Note on expedited service -->
+		            	<li>Fill out your <b>personal information</b></li>
+		            	<p>If possible, include your name, home address, phone number, and email address.</p>
+		            	<li>Click next and <b>Submit!</b></li>
+		            	<p>It will say you are only 4% done, but that's okay. We'll get them the information during the interview.</p>
+		            	<li>Write down your <b>confirmation number</b></li>
+		            	<p>You'll need it for Step 3, so please keep track of it.</p>
+		            	
+		            </ol>
+		            <!-- <a href="step3.html" class="btn btn-primary pull-right">Step 3 ></a> -->
+		          </div>
+		          <div class="well" id="step3">
+		            <h2>Step 3: Send documents</h2>
+		            <p> </p>
+
+		            <p>Now we're going to <b>scan</b> and <b>email</b> your documents to our office:</p>
+		            <div class="row">
+		            	<!-- Documents -->
+			            <ul class="offset1 unstyled">
+			            	<li><input id="" type="checkbox" value=""/>
+			            	<label for"bank"><b>ID</b>, like a drivers license or passport</label></li>
+
+			            	<li><input id="" type="checkbox" value=""/>
+			            	<label for"bank">Proof of <b>residence</b> in San Francisco, like a driver's license or bill</label></li>
+
+			            	<li><input id="" type="checkbox" value=""/>
+			            	<label for"bank">Proof of all <b>income</b> for the past 30 days, like wage stubs</label></li>
+
+			            	<li><input id="" type="checkbox" value=""/>
+			            	<label for"bank"><b>Receipts</b> for rent, utilities, medical bills, and child support payments</label></li>
+			            </ul>
+		            </div>
+		            <p><b>Scan</b> or take <b>pictures</b> of these documents using your phone. Put them into one big email, and send the email to: <a href="mailto:food@sfgov.org">food@sfgov.org</a></p>
+
+		            <p>In the body of the email, you can say:
+		            	<blockquote>Hello,<br>
+		            		I have attached my verification documents for my CalFresh application.<br>
+		            		My name is <b>[PUT NAME HERE]</b><br>
+		            		My confirmation number is <b>[PUT CONFIRMATION NUMBER HERE]</b><br>
+
+		            	</blockquote>
+
+		            <!-- <a href="step4.html" class="btn btn-primary pull-right">Step 4 ></a> -->
+				    </div>
+				    <div class="well" id="step4">
+	            <h2>Step 4: Interview</h2>
+	            <p>After submitting your application and emailing your documents, you will get a phone call to schedule a time for your interview. The interview will take about <b>one hour</b> can be in person or over the phone. It is your choice.</p>
+
+	            	<p>Make sure you have these things with you during the interview:</p>
+	            
+	             <div class="row">
+	            	<!-- Documents -->
+		            <ul class="offset1 unstyled">
+		            	<!-- <li><h5>Things you need</h5></li> -->
+		            	<li><input id="" type="checkbox" value=""/>
+		            	<label for"bank"><b>ID</b>, like a drivers license or passport</label></li>
+
+		            	<li><input id="" type="checkbox" value=""/>
+		            	<label for"bank">Proof that you <b>live in San Francisco</b>, like a driver's license or bill</label></li>
+
+		            	<li><input id="" type="checkbox" value=""/>
+		            	<label for"bank">Proof of all <b>income</b> for the past 30 days, like wage stubs</label></li>
+
+		            	<li><input id="" type="checkbox" value=""/>
+		            	<label for"bank"><b>Receipts</b> for rent, utilities, medical bills, and child support payments</label></li>
+
+		            	<li><input id="" type="checkbox" value=""/>
+		            	<label for"bank"><b>Social Security Numbers (SSNs)</b> for everyone who lives in your house that you buy and cook food with</label></li>
+		            </ul>
+	            </div>
+
+	            <p>At the end of the interview, we will tell you if you qualify for CalFresh or if we need more information.</p>
+
+            <!-- <a href="next.html" class="btn btn-primary pull-right">What's next?</a> -->
+				    </div>
+				    <div class="well" id="next">
+	            <h2>What's next?</h2>
+	            <p>[Quarterly report description]</p>
+	            <p>[Annual report description]</p>
+	            <!-- BODY GOES HERE -->
+							<form>
+								<fieldset>
+									<label>Do you want to receive text message reminders on your cell phone when your reports are due?</label><br>
+									<input type="text" placeholder="(555) 206-8727">
+									</label>
+									<button type="submit" class="btn">Remind me of upcoming reports</button>
+								</fieldset>
+							</form>
+	            <!-- <a href="questions.html" class="btn btn-primary pull-right">Questions?</a> -->
+				    </div>
+				    <div class="well" id="questions">
+	            <h2>Questions</h2>
+	            <div class="alert">
+	            	<p>If this page doesn't answer your questions, give us a call. <h5>(877) 366-3076</h5></p>
+	            </div>
+							<h5>Who should I include in the application?</h5>
+							<p>Everyone who lives in your house, who you purchase and prepare food with.</p>
+
+							<h5>Do you really need the Social Security Number of everyone in my house?</h5>
+							<p>Yes, as long as you purchase and prepare food with them. If someone is not a citizen or Legal Permanent resident, you can leave them off the application.</p>
+
+							<h5>I'm a veteran. Does this change anything?</h5>
+							<p>No. Just apply as normal.</p>
+
+							<h5>I'm receiving Supplemental Security Income (SSI). Should I still apply?</h5>
+							<p>No. You aren't eligible if you're receiving SSI. Make sure you are actually receiving SSI and not some other form of income from the Social Security Agency.</p>
+
+							<h5>I'm not a US citizen or Legal Permanent Resident. Should I still apply?</h5>
+							<p>No. You have to be a citizen or Legal Permanent Resident to get CalFresh. However, if you have a US born child, you can apply for them.</p>
+
+							<h5>I'm an undocumented immigrant with a US born child. Can I apply for my child?</h5>
+							<p>Yes. Just leave yourself off the application.</p>
+
+							<h5>I have a Green Card. Should I still apply?</h5>
+							<p>Yes.</p>
+
+							<h5>Does it matter if I have money in a savings account?</h5>
+							<p>No. We don't look at how much money you have saved up.</p>
+
+							<h5>After I apply, what happens next?</h5>
+							<p>Someone will call you on the phone to schedule a time for the interview.</p>
+
+							<h5>Can I do the interview over the phone?</h5>
+							<p>Both! We can do the interview over the phone or in person at 1235 Mission Street, San Francisco.</p>
+
+							<h5>What if I'm traveling abroad?</h5>
+							<p>If you are traveling or living outside of San Francisco for more than 30 days, you will lose CalFresh.</p>
+
+							<h5>What holidays are you closed?</h5>
+							<p>New Year’s Day, MLK, President’s Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veteran’s Day, Thanksgiving and day after, Christmas</p>
+
+							<h5>How can I bring proof of income if I don't have any income?</h5>
+							<p>Just tell us. We will write this down and ask you to sign.</p>
+				    </div>
+			   	</div>
+		</div>
+		
+		<!-- ID Modal -->
+		<div id="id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="incomeLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+		    <h3 id="incomeLabel">Identification</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>If you don't have a drivers license, that's okay. You can bring any ONE of these instead:</p>
+		    <ul>
+		    	<li>Birth certificate</li>
+		    	<li>Driver's license</li>
+		    	<li>Voter registration card</li>
+		    	<li>School records</li>
+		    	<li>U.S. Passport</li>
+		    </ul>
+		  </div>
+
+
+		
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		  </div>
+		</div>
+		
+  </body>
+  <script>
+
+  	$(function() {
+	  	$('#navbarExample').scrollspy()
+			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
+	    var $sidebar   = $("#navbarExample"), 
+	        $window    = $(window),
+	        offset     = $sidebar.offset(),
+	        topPadding = 5;
+
+	    $window.scroll(function() {
+	      if ($window.scrollTop() > offset.top) {
+	          $sidebar.stop().animate({
+	              marginTop: $window.scrollTop() - offset.top + topPadding
+	          });
+	      } else {
+	          $sidebar.stop().animate({
+	              marginTop: 0
+	          });
+	      }
+	    });
+	    //a dumb little function to update the active class when a user clicks a nav button
+	    $('#navbarExample>ul>li>a').click(function(){
+				$('#navbarExample>ul>li').removeClass('active');
+	    	$(this).parent('li').addClass('active');
+	    });
+	  	$('#navbarExample li').first().addClass('active');
+		});
+  </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40052704-1', 'github.io');
+  ga('send', 'pageview');
+
+</script>
+</html>
