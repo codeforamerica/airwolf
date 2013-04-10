@@ -23,32 +23,82 @@
 		      <div class="well well-special">
 					  <ul class="nav nav-list">
 					  	<li class="nav-header">Application steps</li>
-					    <li class="active"><a href="step1.html" >Step 1 Applying</a></li>
-					    <li><a href="step2.html">Step 2 Interview</a></li>
-					    <li><a href="step3.html">Step 3 Decision</a></li>
-					    <li><a href="checklist.html">Checklist</a></li>
+					    <li class="active"><a href="step1.html" >Step 1 Prepare</a></li>
+					    <li><a href="step2.html">Step 2 Apply</a></li>
+					    <li><a href="step3.html">Step 3 Interview</a></li>
+					    <li><a href="questions.html">Questions</a></li>
+					    <!-- <li><a href="checklist.html">Checklist</a></li> -->
 					  </ul>
 					</div>
 		    </div>
 		    <div class="span6">
-            <h2>Step 1</h2>
-            <div class="alert">
+            <h2>Step 1: Prepare</h2>
+            <!-- <div class="alert">
             	<p>Important!</p>
             	<p>If you are enrolled in Medi-Cal or Cal-Works, you may have a different applicationprocess. Call (510) 123-4566 for Medi-Cal or (510) 890-1234</p>
+            </div> -->
+            <p>Before you start applying, you'll need to get a few things together:</p>
+            <!-- <ul>
+            	<li><b>Identification</b>, like a drivers license or passport <a href="#id" role="button" class="btn" data-toggle="modal">?</a></li>
+            	<li>Proof of <b>residence</b> in San Francisco, like a driver's license or bill</li>
+            	<li>Proof of all <b>income</b> for the past 30 days, like wage stubs and checks</li>
+            	<li>The <b>Social Security Numbers (SSNs)</b> for everyone who lives in your house who you buy and cook food with.</li>
+            	<li><b>Receipts</b> for rent, utilities, medical bills, and child support payments</li>
+            </ul> -->
+            <div class="row">
+            	<!-- Documents -->
+	            <ul class="offset1 unstyled">
+	            	<li><h5>Documents</h5></li>
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>ID</b>, like a drivers license or passport</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof of <b>residence</b> in San Francisco, like a driver's license or bill</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof of all <b>income</b> for the past 30 days, like wage stubs</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Receipts</b> for rent, utilities, medical bills, and child support payments</label></li>
+	            </ul>
             </div>
-            <p>Here's how to apply:</p>
-            <ol>
-            	<li>Gather your documents</li>
-            	<li>Apply in person, online, or on the phone</li>
-            	<li>Interview</li>
-            </ol>
-            <p>We'll walk you through the steps. If you have already applied, you can see the next steps too.</p>
-            <p>See the checklist for a printable checklist of what you need.</p>
-						<a href="step2.html" class="btn btn-primary pull-right">Step 2 >></a>
+
+            <div class="row">
+            	<!-- Info -->
+	            <ul class="offset1 unstyled">
+	            	<li><h5>Other information</h5></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Social Security Numbers (SSNs)</b> for everyone who lives in your house that you buy and cook food with</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Anything else?</label></li>
+	            </ul>
+            </div>
+
+            <div class="row">
+            	<!-- Supplies -->
+	            <ul class="offset1 unstyled">
+	            	<li><h5>Supplies</h5></li>
+	            	<p>These aren't required, but will make applying much easier.</p>
+	            	
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Printer</b></label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Scanner</b> or <b>camera phone</b></label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Email</b> address (<a href="">click here to get one for free</a>.)</label></li>
+	            </ul>
+            </div>
+
+            <a href="step2.html" class="btn btn-primary pull-right">Step 2 ></a>
 		    </div>
+		    
 		    <div class="span3">
 		      <!--Sidebar content-->
-		      <div class="well well-special">
+		      <!-- <div class="well well-special">
 					  <ul class="nav nav-list">
 					  	<li class="nav-header">Important info</li>
 					    <li><a href="#">Address</a></li>
@@ -56,7 +106,31 @@
 					    <li><a href="#">Apply!</a></li>
 					  </ul>
 					</div>
-		    </div>
+		    </div> -->
+		  </div>
+		</div>
+		
+		<!-- ID Modal -->
+		<div id="id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="incomeLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+		    <h3 id="incomeLabel">Identification</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>If you don't have a drivers license, that's okay. You can bring any ONE of these instead:</p>
+		    <ul>
+		    	<li>Birth certificate</li>
+		    	<li>Driver's license</li>
+		    	<li>Voter registration card</li>
+		    	<li>School records</li>
+		    	<li>U.S. Passport</li>
+		    </ul>
+		  </div>
+
+
+		
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 		  </div>
 		</div>
   </body>
