@@ -258,6 +258,7 @@
 		
   </body>
   <script>
+  $('#navbarExample>ul>li').removeClass('active');
   	$(function() {
 	  	$('#navbarExample').scrollspy()
 			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
@@ -304,6 +305,6 @@
 	window.setTimeout(function(){
 		$('#navbarExample>ul>li').removeClass('active');
 		$('#navbarExample li').first().addClass('active');
-	}, 100);
+	}, 200);
 </script>
 </html>
