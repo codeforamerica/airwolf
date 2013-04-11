@@ -27,3 +27,8 @@ label {
 .well-special {
   padding: 8px 0px;
 }
+
+/* line 26, ../sass/main.scss */
+.fixed {
+  top: 100px;
+}
