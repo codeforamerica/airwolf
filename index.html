@@ -3,9 +3,9 @@
 	<head>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	  <script src="js/bootstrap.min.js"></script>
-		<link href="css/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <link href="css/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
 	  <link href="css/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<link href="css/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <!--[if IE]>
 	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <![endif]-->
@@ -18,44 +18,50 @@
 		</div><!-- end nav-bar-->
 		<div class="container-fluid">
 		  <div class="row-fluid">
-		    <div class="span1">
+		  	<div class="span9 offset3"><!--main container-->
+			  	<div class="span6"><!--main content-->
+	            <h2>Applying to CalFresh</h2>
+		            <p>CalFresh helps you buy food. This guide will help you in applying. However, if any of the steps don't fit your situation, call a Calfresh worker to check what you should do!</p>
+		            <p>We will start with what you need, and then go through the steps involved in applying ot CalFresh.</p>
+		            <p>Jump to steps:</p>
+		            <ol>
+		            	<li><a href="#step1" name="step1">Step 1</a></li>
+		            	<li><a href="#step2" name="step2">Step 2</a></li>
+		            	<li><a href="#step3" name="step3">Step 3</a></li>
+		            </ol>
+	        	</div> <!--end intro text-->
+	        	<div class="span3">
+	        	</div>
+    		</div>
+    	  </div>
+    	  <div class="row-fluid">
+    		<div class="span9 offset3">
+        	<div class="span6">
+	            <div class="alert">
+	            	<p>Important!</p>
+	            	<p>If you are enrolled in Medi-Cal or Cal-Works, you may have a different application process. Call (510) 123-4566 for Medi-Cal or (510) 890-1234</p>
+	            </div>
+	            <p>Here's how to apply:</p>
+	            <ol>
+	            	<li>Gather your documents</li>
+	            	<li>Apply in person, online, or on the phone</li>
+	            	<li>Interview</li>
+	            </ol>
+	            <p>We'll walk you through the steps. If you have already applied, you can see the next steps too.</p>
+	            <p>See the checklist for a printable checklist of what you need.</p>
+							<a href="step2.html" class="btn btn-primary pull-right">Step 2 >></a>
+			</div>
+		    <div class="span3">
 		      <!--Sidebar content-->
-		      <div class="tabbable tabs-left">
-					  <ul class="nav nav-tabs">
-					    <li class="active"><a href="step1.html" >Step 1 Applying</a></li>
-					    <li><a href="step2.html" data-toggle="tab">Step 2 Interview</a></li>
-					    <li><a href="step3.html" data-toggle="tab">Step 3 Decision</a></li>
-					    <li><a href="checklist.html" data-toggle="tab">Checklist</a></li>
-					  </ul>
-					</div>
-		    </div>
-		    <div class="span6">
-				  <div class="tab-content">
-				    <div class="tab-pane active" id="step1">
-              <h2>Step 1</h2>
-            </div>
-            <div class="tab-pane" id="step2">
-              <h2>Step 2</p>
-            </div>
-            <div class="tab-pane" id="step2">
-              <h2>Step 3</p>
-            </div>
-            <div class="tab-pane" id="step2">
-              <h2>Checklist</p>
-            </div>
-				  </div>
-		      <!--Body content-->
-		    </div>
-		    <div class="span2">
-		      <!--Sidebar content-->
-		      <h3>Important info</h3>
-		      <div class="">
-					  <ul class="">
-					    <li><a href="#">Address</a></li>
-					    <li><a href="#">Phone</a></li>
-					    <li><a href="#">Apply!</a></li>
-					  </ul>
-					</div>
+		      <div class="well well-special">
+				  <ul class="nav nav-list">
+				  	<li class="nav-header">Important info</li>
+				    <li><a href="#">Address</a></li>
+				    <li><a href="#">Phone</a></li>
+				    <li><a href="#">Apply!</a></li>
+				  </ul>
+				</div>
+			</div>
 		    </div>
 		  </div>
 		</div>
