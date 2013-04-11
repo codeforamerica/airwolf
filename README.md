@@ -1,6 +1,8 @@
 Code for an application helper
 ==============================
 
+[![Build Status](https://travis-ci.org/codeforamerica/airwolf.png?branch=master)](https://travis-ci.org/codeforamerica/airwolf)
+
 Developed by Team SF for San Francisco HSA.
 
 # Introduction
