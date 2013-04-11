@@ -13,32 +13,33 @@
   <body>
   	<div class="navbar">
 		  <div class="navbar-inner">
-		    <a class="brand" href="index.html">CalFresh helper - test A</a>
+		    <a class="brand" href="index.html">CalFresh helper</a>
 		  </div>
 		</div><!-- end nav-bar-->
 		<div class="container-fluid">
 		  <div class="row-fluid">
-		  	<div class="span9 offset3"><!--main container-->
-			  	<div class="span6"><!--main content-->
-	            <h2>Applying to CalFresh</h2>
-		            <p>CalFresh helps you buy food. This guide will help you in applying. However, if any of the steps don't fit your situation, call a Calfresh worker to check what you should do!</p>
-		            <p>We will start with what you need, and then go through the steps involved in applying ot CalFresh.</p>
-		            <p>Jump to steps:</p>
-					  <ol>
-					  	<li class="nav-header">Application steps</li>
-					    <li class="active"><a href="index.html" >Step 1 Prepare</a></li>
-					    <li><a href="step2.html">Step 2 Apply</a></li>
-					    <li><a href="step3.html">Step 3 Email documents</a></li>
-					    <li><a href="step4.html">Step 4 Interview</a></li>
-					    <li><a href="next.html">What's next?</a></li>
-					    <li><a href="questions.html">Questions</a></li>
-					  </ol>
-	        	</div> <!--end intro text-->
-	        	<div class="span3">
-	        	</div>
-    		</div>
+		  	<div class="span2">
+		      <!--Sidebar content-->
+		      <div class="well-special fixed">
+						<div id="navbarExample" class="subnav">
+		        	<ul class="nav nav-pills">
+		        		<li class="active"><a href="#step1">Step 1 Prepare</a></li>
+								<li><a href="#step2">Step 2 Apply</a></li>
+						    <li><a href="#step3">Step 3 Email documents</a></li>
+						    <li><a href="#step4">Step 4 Interview</a></li>
+						    <li><a href="#next">What's next?</a></li>
+						    <li><a href="#questions">Questions</a></li>
+			        </ul>
+			    	</div>
+					</div>
+		    </div>
+			  	<div class="span6 offset1"><!--main content-->
+            <h2>Applying to CalFresh</h2>
+            <p>CalFresh helps you buy food. This guide will help you in applying. However, if any of the steps don't fit your situation, call a Calfresh worker to check what you should do!</p>
+            <p>We will start with what you need, and then go through the steps involved in applying ot CalFresh.</p>
+            <p>Jump to steps:</p>
+        	</div> <!--end intro text-->
     	  </div> <!--end intro row-->
-
 
     	  <div class="row-fluid"> <!-- step one row -->
     		<div class="span9 offset3">
@@ -198,6 +199,37 @@
 		</div>
   </body>
   <script>
+<<<<<<< HEAD
+=======
+  $('#navbarExample>ul>li').removeClass('active');
+  	$(function() {
+	  	$('#navbarExample').scrollspy()
+			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
+	    var $sidebar   = $("#navbarExample"), 
+	        $window    = $(window),
+	        offset     = $sidebar.offset(),
+	        topPadding = 5;
+
+	    $window.scroll(function() {
+	      if ($window.scrollTop() > offset.top) {
+	          $sidebar.stop().animate({
+	              marginTop: $window.scrollTop() - offset.top + topPadding
+	          });
+	      } else {
+	          $sidebar.stop().animate({
+	              marginTop: 0
+	          });
+	      }
+	    });
+	    //a dumb little function to update the active class when a user clicks a nav button
+	    $('#navbarExample>ul>li>a').click(function(){
+				$('#navbarExample>ul>li').removeClass('active');
+	    	$(this).parent('li').addClass('active');
+	    });
+		});
+  </script>
+  <script>
+>>>>>>> pages
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -207,4 +239,19 @@
   ga('send', 'pageview');
 
 </script>
+<<<<<<< HEAD
+=======
+
+<script>
+/*
+	Yes smart guy this is an MVP. Really just trying to prove it. Checkout this hack!! It took
+	5 minutes to write. Need it because for some reason the last item in the nav list was automatically 
+	getting selected on page load. Dunno why, but this kills it.
+*/
+	window.setTimeout(function(){
+		$('#navbarExample>ul>li').removeClass('active');
+		$('#navbarExample li').first().addClass('active');
+	}, 200);
+</script>
+>>>>>>> pages
 </html>
