@@ -1,10 +1,13 @@
 body {
-	font-family: Helvetica, arial, sans-serif;
+	font-family: "Helvetica Neue", arial, sans-serif;
 }
 
 //sorry had to hack the label style here
 label {
 	display: inline;
+}
+p, ul, li, a {
+	font-family: "Gotham Light", arial, sans-serif;
 }
 
 .sideRight {
@@ -20,11 +23,25 @@ label {
 }
 
 .well-special {
-	padding: 8px 0px;
+	padding: 10px;
 }
 
 .fixed {
 	top: 100px;
+	position: fixed;
+}
+
+.docsHolder {
+	// padding: 5px;
+	// margin: 5px;
+}
+
+.docs {
+	padding: 5px;
+	margin: 5px;
+}
+.spacer {
+	margin-top: 30px;
 }
 
 
