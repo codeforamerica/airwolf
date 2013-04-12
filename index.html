@@ -81,7 +81,7 @@
 							<div class="span5">
 			        	<h5>Things you need for this step</h5>
 		        		<ul class="offset1 unstyled">
-			          	<li><span class="docs ssn btn btn-danger disabled">Social Security Numbers (SSNs)&nbsp;</span><span><i class="ssn icon-remove"></i></span></li>
+			          	<li><span class="docs ssn btn btn-danger disabled">Social Security Numbers (SSNs)&nbsp;</span><span><i class="ssn icon-warning-sign"></i></span></li>
 		            </ul>
 		        	</div>
 	    		</div>
@@ -110,9 +110,9 @@
 		        <div class="span5">
 		        	<h5>Things you need for this step</h5>
 	        		<ul class="offset1 unstyled">
-				          <li><span class="docs id btn btn-danger disabled">An ID</span><span><i class="id icon-remove"></i></span></li>
-									<li><span class="docs residence btn btn-danger disabled">Proof that you live in San Francisco</span><span><i class="residence icon-remove"></i></span></li>
-									<li><span class="docs income btn btn-danger disabled">Proof of all income for the past 30 days</span><span><i class="income icon-remove"></i></span></li>
+				          <li><span class="docs id btn btn-danger disabled">An ID</span><span><i class="id icon-warning-sign"></i></span></li>
+									<li><span class="docs residence btn btn-danger disabled">Proof that you live in San Francisco</span><span><i class="residence icon-warning-sign"></i></span></li>
+									<li><span class="docs income btn btn-danger disabled">Proof of all income for the past 30 days</span><span><i class="income icon-warning-sign"></i></span></li>
 	            	</ul>
 		        	</div>
 	    		</div>
@@ -134,10 +134,10 @@
 					<!-- Documents -->
 						<ul class="offset1 unstyled">
 							<li><h5>Things you need for this step</h5></li>
-		        	<li><span class="docs id btn btn-danger disabled">An ID</span><span><i class="id icon-remove"></i></span></li>
-							<li><span class="docs residence btn btn-danger disabled">Proof that you live in San Francisco</span><span><i class="residence icon-remove"></i></span></li>
-							<li><span class="docs income btn btn-danger disabled">Proof of all income for the past 30 days</span><span><i class="income icon-remove"></i></span></li>
-							<li><span class="docs ssn btn btn-danger disabled">Social Security Numbers (SSNs)</span><span><i class="ssn icon-remove"></i></span></li>
+		        	<li><span class="docs id btn btn-danger disabled">An ID</span><span><i class="id icon-warning-sign"></i></span></li>
+							<li><span class="docs residence btn btn-danger disabled">Proof that you live in San Francisco</span><span><i class="residence icon-warning-sign"></i></span></li>
+							<li><span class="docs income btn btn-danger disabled">Proof of all income for the past 30 days</span><span><i class="income icon-warning-sign"></i></span></li>
+							<li><span class="docs ssn btn btn-danger disabled">Social Security Numbers (SSNs)</span><span><i class="ssn icon-warning-sign"></i></span></li>
 						</ul>
 					</div>
 				</div>
@@ -271,17 +271,17 @@
 	    	$('input:not(:checked)').each(function(){
     			var docText = $(this).attr('name');
     			$('li span.'+docText).addClass('btn-danger');
-    			$('li i.'+docText).addClass('icon-remove');
+    			$('li i.'+docText).addClass('icon-warning-sign');
     			$('li span.'+docText).removeClass('btn-success');
-    			$('li i.'+docText).removeClass('icon-ok');
+    			$('li i.'+docText).removeClass('icon-check');
 	    	}); 
 	    	$('input:checked').each(function(){
     			var docText = $(this).attr('name');
     			// change button color
     			$('li span.'+docText).addClass('btn-success');
-    			$('li i.'+docText).addClass('icon-ok');
+    			$('li i.'+docText).addClass('icon-check');
     			$('li span.'+docText).removeClass('btn-danger');
-    			$('li i.'+docText).removeClass('icon-remove');
+    			$('li i.'+docText).removeClass('icon-warning-sign');
 	    	}); 
 	    });
 		});
