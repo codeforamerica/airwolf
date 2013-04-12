@@ -20,11 +20,17 @@ label {
 }
 
 .well-special {
-	padding: 8px 0px;
+	padding: 10px;
 }
 
 .fixed {
 	top: 100px;
+	position: fixed;
+}
+
+.docsHolder {
+	// padding: 5px;
+	// margin: 5px;
 }
 
 

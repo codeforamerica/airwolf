@@ -25,15 +25,16 @@ label {
 
 /* line 22, ../sass/main.scss */
 .well-special {
-  padding: 8px 0px;
+  padding: 10px;
 }
 
 /* line 26, ../sass/main.scss */
 .fixed {
   top: 100px;
+  position: fixed;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 .subnav-fixed {
   position: fixed;
   top: 0px;
@@ -51,7 +52,7 @@ label {
 }
 
 /* Subnav */
-/* line 47, ../sass/main.scss */
+/* line 53, ../sass/main.scss */
 .subnav {
   width: 100%;
   height: 36px;
@@ -79,17 +80,17 @@ label {
   border-radius: 4px;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 .subnav .nav {
   margin-bottom: 0;
 }
 
-/* line 67, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 .subnav .nav > li {
   float: left;
 }
 
-/* line 70, ../sass/main.scss */
+/* line 76, ../sass/main.scss */
 .subnav .nav > li > a {
   margin: 0;
   padding-top: 11px;
@@ -104,7 +105,7 @@ label {
   padding-left: 10px;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 90, ../sass/main.scss */
 .subnav .nav > .active > a,
 .subnav .nav > .active > a:hover {
   padding-left: 13px;
@@ -117,13 +118,13 @@ label {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* line 95, ../sass/main.scss */
+/* line 101, ../sass/main.scss */
 .subnav .nav > .active > a .caret,
 .subnav .nav > .active > a:hover .caret {
   border-top-color: #777;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 .subnav .nav > li:first-child > a,
 .subnav .nav > li:first-child > a:hover {
   border-left: 0;
@@ -133,24 +134,24 @@ label {
   border-radius: 4px 0 0 4px;
 }
 
-/* line 106, ../sass/main.scss */
+/* line 112, ../sass/main.scss */
 .subnav .nav > li:last-child > a {
   border-right: 0;
 }
 
-/* line 109, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 .subnav .dropdown-menu {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
 
-/* line 115, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 .navbar {
   padding-bottom: 30px;
 }
 
-/* line 118, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 .navbar-inner {
   min-height: 32px;
 }
