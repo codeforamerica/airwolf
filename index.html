@@ -10,8 +10,8 @@
 	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <![endif]-->
   </head>
-  <body>
-  	<div class="navbar">
+  <body data-spy="scroll" data-target="#navbar">
+  	<div id="navbar" class="navbar">
 		  <div class="navbar-inner subnav">
 		    <a class="brand" href="index.html">CalFresh helper</a>
       	<ul class="nav nav-pills">
@@ -234,33 +234,29 @@
 		</div>
   </body>
   <script>
-  $('#navbar>ul>li').removeClass('active');
   	$(function() {
-	  	$('#navbar').scrollspy()
 		// fix the top nav bar on scroll
 	    var $win = $(window)
 	      , $nav = $('.subnav')
 	      , navTop = $('.subnav').length && $('.subnav').offset().top
-	      , isFixed = 0
+	      , isFixed = 0,
+		      offset  = $('#navbar').offset(),
+	        topPadding = 5;
 
-	    processScroll()
-
-	    $win.on('scroll', processScroll)
-
-	    function processScroll() {
-	      var i, scrollTop = $win.scrollTop() -100
-	      if (scrollTop >= navTop && !isFixed) {
-	        isFixed = 1
+	    // this scrolling function only vaguely works. Need to figure out this offset business
+	    $win.scroll(function() {
+	    	var topBuffer = $win.scrollTop() -80
+	      if ($win.scrollTop() > navTop && !isFixed) {
+	      	isFixed = 1
 	        $nav.addClass('subnav-fixed')
-	      } else if (scrollTop <= navTop && isFixed) {
-	        isFixed = 0
+          $('.navbar').stop().animate();
+	      } else if ($win.scrollTop() < navTop && isFixed){
+	      	isFixed = 0
 	        $nav.removeClass('subnav-fixed')
+          $('html,body').stop().animate({
+	              marginTop: 0
+	        });
 	      }
-	    }
-	    //a dumb little function to update the active class when a user clicks a nav button
-	    $('#navbarExample>ul>li>a').click(function(){
-				$('#navbarExample>ul>li').removeClass('active');
-	    	$(this).parent('li').addClass('active');
 	    });
 		});
   </script>
@@ -273,16 +269,5 @@
   ga('create', 'UA-40052704-1', 'github.io');
   ga('send', 'pageview');
 
-</script>
-<script>
-/*
-	Yes smart guy this is an MVP. Really just trying to prove it. Checkout this hack!! It took
-	5 minutes to write. Need it because for some reason the last item in the nav list was automatically 
-	getting selected on page load. Dunno why, but this kills it.
-*/
-	// window.setTimeout(function(){
-	// 	$('#navbarExample>ul>li').removeClass('active');
-	// 	$('#navbarExample li').first().addClass('active');
-	// }, 200);
 </script>
 </html>
