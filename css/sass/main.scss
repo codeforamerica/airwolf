@@ -1,10 +1,13 @@
 body {
-	font-family: Helvetica, arial, sans-serif;
+	font-family: "Helvetica Neue", arial, sans-serif;
 }
 
 //sorry had to hack the label style here
 label {
 	display: inline;
+}
+p, ul, li, a {
+	font-family: "Gotham Light", arial, sans-serif;
 }
 
 .sideRight {
