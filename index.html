@@ -10,7 +10,7 @@
 	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <![endif]-->
   </head>
-  <body data-spy="scroll" data-target="#navbar">
+  <body data-spy="scroll" data-target="#navbar" data-offset="200">
   	<div id="navbar" class="navbar navbar-inverse">
 		  <div class="navbar-inner subnav navbar-inverse">
 		    <a class="brand" href="index.html">CalFresh helper</a>
@@ -32,31 +32,29 @@
             <p>This guide will help you in applying. However, if any of the steps don't fit your situation, call a Calfresh worker to check what you should do!</p>
         	</div> <!--end intro text-->
 	  	  </div> <!--end intro row-->
-	  	  <div id="gather" class="row-fluid">
-		  	  <div id="step1" class="">
-						<div class="offset1 spacer">
-							<h2><span class="step">Step 1:</span> Gather your documents</h2>
-							<div>
-	            	<ul class="unstyled">
-		            	<li><input id="ssn" type="checkbox" name="ssn" value="ssn"/>
-		            	<label for="ssn"><strong>Social Security Numbers (SSNs)</strong> for everyone who lives in your house that you buy and cook food with</label></li>
-		            	<li><input name="id" id="id" type="checkbox" value="id"/>
-		            	<label for="id"><strong>ID</strong>, like a drivers license or passport</label></li>
+	  	  <div id="step1" class="row-fluid spacer stepRow">
+					<div class="span8 offset1">
+						<h2><span class="step">Step 1:</span> Gather your documents</h2>
+						<div>
+            	<ul class="unstyled">
+	            	<li><input id="ssn" type="checkbox" name="ssn" value="ssn"/>
+	            	<label for="ssn"><strong>Social Security Numbers (SSNs)</strong> for everyone who lives in your house that you buy and cook food with</label></li>
+	            	<li><input name="id" id="id" type="checkbox" value="id"/>
+	            	<label for="id"><strong>ID</strong>, like a drivers license or passport</label></li>
 
-		            	<li><input name="residence" id="residence" type="checkbox" value="residence"/>
-		            	<label for="residence">Proof of <strong>residence</strong> in San Francisco, like a driver's license or bill</label></li>
+	            	<li><input name="residence" id="residence" type="checkbox" value="residence"/>
+	            	<label for="residence">Proof of <strong>residence</strong> in San Francisco, like a driver's license or bill</label></li>
 
-		            	<li><input name="income" id="income" type="checkbox" value="income"/>
-		            	<label for="income">Proof of all <strong>income</strong> for the past 30 days, like wage stubs</label></li>
+	            	<li><input name="income" id="income" type="checkbox" value="income"/>
+	            	<label for="income">Proof of all <strong>income</strong> for the past 30 days, like wage stubs</label></li>
 
-		            	<li><input name="payments" id="payments" type="checkbox" value="payments"/>
-		            	<label for="payments"><strong>Receipts</strong> for rent, utilities, medical bills, and child support payments</label></li>
-		            </ul>
-					    </div>
-						</div>
+	            	<li><input name="payments" id="payments" type="checkbox" value="payments"/>
+	            	<label for="payments"><strong>Receipts</strong> for rent, utilities, medical bills, and child support payments</label></li>
+	            </ul>
+				    </div>
 					</div>
 				</div> <!-- end gather -->
-    	  <div id="step2" class="row-fluid"> <!-- step one row -->
+    	  <div id="step2" class="row-fluid stepRow"> <!-- step one row -->
 	    		<div class="offset1 spacer">
 	        	<div class="span8">
 		        	<h2><span class="step">Step 2:</span> Apply</h2>
@@ -84,8 +82,8 @@
 		        	</div>
 	    		</div>
 			</div> <!--end step 1 row -->
-
-		<div id="step3" class="row-fluid"> <!-- step 2 row-->
+ 
+		<div id="step3" class="row-fluid stepRow"> <!-- step 2 row-->
 		  	<div class="offset1 spacer">
 			  	<div class="span8">
 						<h2><span class="step">Step 3:</span> Send documents</h2>
@@ -112,7 +110,7 @@
     	</div> <!--end step 2 row-->
 
 
-		<div id="step4" class="row-fluid"> <!-- step 3 row-->
+		<div id="step4" class="row-fluid stepRow"> <!-- step 3 row-->
 		  	<div class="offset1 spacer">
 			  	<div class="span8">
 			  		<h2><span class="step">Step 4:</span> Interview</h2>
@@ -233,6 +231,10 @@
   </body>
   <script>
   	$(function() {
+  		$('.nav li a').click(function(){
+  			activeStyle($(this).attr('href'));
+  		});
+
 		// fix the top nav bar on scroll
 	    var $win = $(window)
 	      , $nav = $('.subnav')
@@ -240,6 +242,10 @@
 	      , isFixed = 0;
 	      // this scrolling function only vaguely works. Need to figure out this offset business
 	    $win.scroll(function() {
+	    	var top = $win.scrollTop();
+	    	//change the styling
+	    	activeStyle();
+
 	    	var topBuffer = $win.scrollTop() -80
 	      if ($win.scrollTop() > navTop && !isFixed) {
 	      	isFixed = 1
@@ -274,6 +280,23 @@
 	    	}); 
 	    });
 		});
+
+	//changes the styling of the active nav element (based on spy-scroll)
+	function activeStyle(activeEl) {
+		!activeEl ? activeEl=$('.navbar-inverse li.active').children('a').attr('href'):activeEl=activeEl;
+		$('.stepRow').css('color','#ccc');
+		$('.stepRow h2').css('color','#ccc');
+  	$('.stepRow .span8').css({
+  		'border-left':'5px solid #fff'
+  	});
+  	
+  	// $(activeLi).removeClass('stepRow');
+  	$(activeEl).css('color','#000');
+  	$(activeEl+' h2').css('color','#333');
+  	$(activeEl+' .span8').css({
+  		'border-left':'5px solid #ccc'
+  	});
+	}
   </script>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

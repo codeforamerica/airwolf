@@ -27,8 +27,9 @@ h2 {
 	}
 }
 
-.step {
-	font-weight: 600;
+.docs {
+	padding: 5px;
+	margin: 5px;
 }
 
 .well-special {
@@ -40,19 +41,30 @@ h2 {
 	position: fixed;
 }
 
-.docsHolder {
-	// padding: 5px;
-	// margin: 5px;
+.navbar {
+	padding-bottom: 30px;
+}
+.navbar-inner {
+	min-height: 42px;
 }
 
-.docs {
-	padding: 5px;
-	margin: 5px;
-}
 .spacer {
-	margin-top: 30px;
+	margin-top: 100px;
 }
 
+.step {
+	font-weight: 600;
+}
+
+.stepRow {
+	color: #ccc;
+	h2 {
+		color: #ccc;
+	}
+	.span8 {
+		padding-left: 10px;
+	}
+}
 
 .subnav-fixed{
 	position: fixed;
@@ -130,9 +142,4 @@ h2 {
 // 	          border-radius: 0 0 4px 4px;
 // 	}
 
-.navbar {
-	padding-bottom: 30px;
-}
-.navbar-inner {
-	min-height: 42px;
-}
+
