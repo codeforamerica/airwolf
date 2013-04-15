@@ -62,29 +62,50 @@ h2 {
 }
 
 /* line 51, ../sass/main.scss */
+.navbar-inverse .nav .active > a {
+  color: #111;
+  background: #fff;
+}
+/* line 54, ../sass/main.scss */
+.navbar-inverse .nav .active > a:hover {
+  color: #111;
+  background: #fff;
+}
+
+/* line 60, ../sass/main.scss */
+.navbar-inverse .nav > a {
+  color: #111;
+  background: #fff;
+}
+/* line 63, ../sass/main.scss */
+.navbar-inverse .nav > a:hover {
+  color: red;
+}
+
+/* line 66, ../sass/main.scss */
 .spacer {
   margin-top: 100px;
 }
 
-/* line 55, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 .step {
   font-weight: 600;
 }
 
-/* line 59, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 .stepRow {
   color: #ccc;
 }
-/* line 61, ../sass/main.scss */
+/* line 76, ../sass/main.scss */
 .stepRow h2 {
   color: #ccc;
 }
-/* line 64, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 .stepRow .span8 {
   padding-left: 10px;
 }
 
-/* line 69, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 .subnav-fixed {
   position: fixed;
   top: 0px;
@@ -94,7 +115,7 @@ h2 {
 }
 
 /* Subnav */
-/* line 77, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .subnav {
   width: 100%;
   height: 36px;

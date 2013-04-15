@@ -48,6 +48,21 @@ h2 {
 	min-height: 42px;
 }
 
+.navbar-inverse .nav .active>a {
+	color: #111;
+	background: #fff;
+	&:hover{
+		color: #111;
+		background: #fff;
+	}
+}
+
+.navbar-inverse .nav>a {
+	color: #111;
+	background: #fff;
+	&:hover{color: red;}
+}
+
 .spacer {
 	margin-top: 100px;
 }
