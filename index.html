@@ -74,10 +74,10 @@
 			            	<p>You'll need it for Step 3, so please keep track of it.</p>
 			            </ol>
 							</div>
-							<div class="span3">
+							<div class="span3 well">
 			        	<h5>Things you need for this step</h5>
-		        		<ul class="unstyled">
-			          	<li><span class="docs ssn btn btn-danger disabled">Social Security Numbers (SSNs)&nbsp;</span><span></span></li>
+		        		<ul>
+			          	<li><span class="docs ssn ">Social Security Numbers (SSNs)&nbsp;</span><span></span></li>
 		            </ul>
 		        	</div>
 	    		</div>
@@ -98,12 +98,12 @@
 
 	            	</blockquote>
 	            </div>
-		        <div class="span3">
+		        <div class="span3 well">
 		        	<h5>Things you need for this step</h5>
-	        		<ul class="unstyled">
-				          <li><span class="docs id btn btn-danger disabled">An ID</span><span></i></span></li>
-									<li><span class="docs residence btn btn-danger disabled">Proof that you live in San Francisco</span><span></span></li>
-									<li><span class="docs income btn btn-danger disabled">Proof of all income for the past 30 days</span><span></span></li>
+	        		<ul>
+				          <li><span class="docs id ">An ID</span><span></i></span></li>
+									<li><span class="docs residence ">Proof that you live in San Francisco</span><span></span></li>
+									<li><span class="docs income ">Proof of all income for the past 30 days</span><span></span></li>
 	            	</ul>
 		        	</div>
 	    		</div>
@@ -121,14 +121,14 @@
 
 						<p>At the end of the interview, we will tell you if you qualify for CalFresh or if we need more information.</p>
 					</div>
-	        <div class="span3">
+	        <div class="span3 well">
 					<!-- Documents -->
-						<ul class="unstyled">
-							<li><h5>Things you need for this step</h5></li>
-		        	<li><span class="docs id btn btn-danger disabled">An ID</span><span></i></span></li>
-							<li><span class="docs residence btn btn-danger disabled">Proof that you live in San Francisco</span><span></span></li>
-							<li><span class="docs income btn btn-danger disabled">Proof of all income for the past 30 days</span><span></span></li>
-							<li><span class="docs ssn btn btn-danger disabled">Social Security Numbers (SSNs)</span><span></span></li>
+						<h5>Things you need for this step</h5>
+						<ul>
+		        	<li><span class="docs id ">An ID</span><span></i></span></li>
+							<li><span class="docs residence ">Proof that you live in San Francisco</span><span></span></li>
+							<li><span class="docs income ">Proof of all income for the past 30 days</span><span></span></li>
+							<li><span class="docs ssn ">Social Security Numbers (SSNs)</span><span></span></li>
 						</ul>
 					</div>
 				</div>
@@ -151,7 +151,7 @@
 					</form>
 
 	        	</div>
-	        	<div class="span3">
+	        	<div class="span3 well">
 	        	</div>
     		</div>
     	  </div> <!--end next steps row-->
@@ -262,19 +262,19 @@
 
 
 	    //change the background color for all the same type of documents
-	    $('input[type=checkbox]').change(function(){
-	    	$('input:not(:checked)').each(function(){
-    			var docText = $(this).attr('name');
-    			$('li span.'+docText).addClass('btn-danger');
-    			$('li span.'+docText).removeClass('btn-success');
-	    	}); 
-	    	$('input:checked').each(function(){
-    			var docText = $(this).attr('name');
-    			// change button color
-    			$('li span.'+docText).addClass('btn-success');
-    			$('li span.'+docText).removeClass('btn-danger');
-	    	}); 
-	    });
+	    // $('input[type=checkbox]').change(function(){
+	    // 	$('input:not(:checked)').each(function(){
+    	// 		var docText = $(this).attr('name');
+    	// 		$('li span.'+docText).addClass('btn-danger');
+    	// 		$('li span.'+docText).removeClass('btn-success');
+	    // 	}); 
+	    // 	$('input:checked').each(function(){
+    	// 		var docText = $(this).attr('name');
+    	// 		// change button color
+    	// 		$('li span.'+docText).addClass('btn-success');
+    	// 		$('li span.'+docText).removeClass('btn-danger');
+	    // 	}); 
+	    // });
 		});
 
 	//changes the styling of the active nav element (based on spy-scroll)
