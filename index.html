@@ -27,7 +27,7 @@
 		<div class="container-fluid">
 			  <div class="row-fluid">
 			  	<div class="span12 hero-unit">
-            <h1>Applying to CalFresh</h1>
+            <h1>Applying for CalFresh</h1>
             <h4>Calfresh helps you buy food, and we want to help you apply for CalFresh</h4>
 		  	  	<p>Applying can be confusing, so we created this guide to walk you through applying for CalFresh. We've tried to make the process understandable, but let us know if you have any problems! You can call the CalFresh Call Center at <strong>(415) 558-1001</strong> or email us at <strong><a href="mailto:food@sfgov">food@sfgov.org</a></strong>.</p>
         	</div> <!--end intro text-->
@@ -39,7 +39,7 @@
 						<div>
             	<ul class="unstyled offset1 docList">
 	            	<li><input id="ssn" type="checkbox" name="ssn" value="ssn"/>
-	            	<label for="ssn"><strong>Social Security Numbers (SSNs)</strong> for everyone in your household</label><a href="#" rel="tooltip" data-toggle="tooltip" title="" data-original-title="A household is everyone in your house with whom you cook and eat meals."> ?</a></li>
+	            	<label for="ssn"><strong>Social Security Numbers (SSNs)</strong> for everyone in your household</label><a rel="popover" data-toggle="popover" data-original-title="What is a household?" data-content="A household is everyone in your house with whom you cook and eat meals."> (<sup>?</sup>)</a></li>
 	            	<li>Your basic information</li>
 	            	<ul class="unstyled offset1">
 		            	<li><input name="id" id="id" type="checkbox" value="id"/>
@@ -65,20 +65,18 @@
 	    		<div class="offset1 spacer">
 	        	<div class="span8">
 		        	<h2><span class="step">Step 2:</span> Apply</h2>
-		            <p>You can use <strong>online</strong> at <a href="https://www.mybenefitscalwin.org/">My Benefits CalWin.</a> to apply online in 30 minutes. Read below for an overview of the application process so you know what to do.</p>
+		            <p>There are three ways to apply for CalFresh: in person, online, or by phone. Applying online is usually the fastest - you can use <a href="https://www.mybenefitscalwin.org/">My Benefits CalWin</a> to apply online in 30 minutes.</p>
 			            <ol>
-			            	<li><p>Get an <strong>email address</strong> (<a href="">click here for a free one</a>)
+			            	<li><p>You need an email address to use My Benefits CalWin. <a rel="popover" data-toggle="popover" data-html="true" data-original-title="Don't have one?" data-content="You can create an email account easily on <a href='http://gmail.com'>Gmail</a>, <a href='http://hotmail.com'>Hotmail</a>, or <a href='http://yahoo.com'>Yahoo</a>.">Don't have one?</a></p>
 			            	<li><a href="https://www.mybenefitscalwin.org/mbp/create/personalinfo.htm?county=38">Create a My Benefits CalWin account</a></li>
-			            	<li><a href="https://www.mybenefitscalwin.org/web/consortium/signin">Sign in and <strong>Apply for Benefits</strong></a><p></li>
-			            	<p>Click Apply for Benefits at the bottom of the page. Follow the screens until you get to the People section where you enter your own information.
-			            		<!-- what to expect, terms agreement > click Food Assistance (CalFresh) checkbox at the bottom > click Continue
-			            		Note on expedited service -->
-			            	<li>Fill out your <strong>personal information</strong></li>
-			            	<p>If possible, include your name, home address, phone number, and email address.</p>
-			            	<li>Click next and <strong>Submit!</strong></li>
-			            	<p>It will say you are only 4% done, but that's okay. We'll get them the information during the interview.</p>
-			            	<li>Write down your <strong>confirmation number</strong></li>
-			            	<p>You'll need it for Step 3, so please keep track of it.</p>
+			            	<li><a href="https://www.mybenefitscalwin.org/web/consortium/signin">Sign in and <strong>Apply for Benefits</strong></a>
+			            	<ul>
+			            		<li>Click Apply for Benefits at the bottom of the page. MyBenefits CalWin will take you through the application. You only need to enter the required information.</li>
+			            		<li>If you are applying for Expedited CalFresh, you will need to enter information about your income.</li>
+			            	</ul>
+			            	<div><span class="badge badge-important">Important! </span><span>
+			            	Write down your confirmation number. You'll need it for Step 3.</span></div>
+			            	</li>
 			            </ol>
 							</div>
 							<div class="span3 well">
@@ -238,7 +236,7 @@
   </body>
   <script>
   	$(function() {
-  		$("[rel='tooltip']").tooltip();
+  		$("[rel='popover']").popover();
   		$('.nav li a').click(function(){
   			activeStyle($(this).attr('href'));
   		});
