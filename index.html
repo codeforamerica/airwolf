@@ -26,30 +26,37 @@
 		</div><!-- end nav-bar-->
 		<div class="container-fluid">
 			  <div class="row-fluid">
-			  	<div class="span12 hero-unit"><!--main content-->
+			  	<div class="span12 hero-unit">
             <h1>Applying to CalFresh</h1>
-            <h3>CalFresh helps you buy food.</h3>
-            <p>This guide will help you in applying. However, if any of the steps don't fit your situation, call a Calfresh worker to check what you should do!</p>
+            <h4>Calfresh helps you buy food, and we want to help you apply for CalFresh</h4>
+		  	  	<p>Applying can be confusing, so we created this guide to walk you through applying for CalFresh. We've tried to make the process understandable, but let us know if you have any problems! You can call the CalFresh Call Center at <strong>(415) 558-1001</strong> or email us at <strong><a href="mailto:food@sfgov">food@sfgov.org</a></strong>.</p>
         	</div> <!--end intro text-->
 	  	  </div> <!--end intro row-->
 	  	  <div id="step1" class="row-fluid spacer stepRow">
 					<div class="span8 offset1">
 						<h2><span class="step">Step 1:</span> Gather your documents</h2>
+						<p>To approve your application, we will need some information about you and your household. There are a few categories of information; we've listed the categories here, with some suggestions of documents to verify your information. We may ask you for more documents if we need more information, but you should ask for the reason if we ask for anything beyond the items below.</p>
 						<div>
-            	<ul class="unstyled">
+            	<ul class="unstyled offset1 docList">
 	            	<li><input id="ssn" type="checkbox" name="ssn" value="ssn"/>
-	            	<label for="ssn"><strong>Social Security Numbers (SSNs)</strong> for everyone who lives in your house that you buy and cook food with</label></li>
-	            	<li><input name="id" id="id" type="checkbox" value="id"/>
-	            	<label for="id"><strong>ID</strong>, like a drivers license or passport</label></li>
-
-	            	<li><input name="residence" id="residence" type="checkbox" value="residence"/>
+	            	<label for="ssn"><strong>Social Security Numbers (SSNs)</strong> for everyone in your household</label><a href="#" rel="tooltip" data-toggle="tooltip" title="" data-original-title="A household is everyone in your house with whom you cook and eat meals."> ?</a></li>
+	            	<li>Your basic information</li>
+	            	<ul class="unstyled offset1">
+		            	<li><input name="id" id="id" type="checkbox" value="id"/>
+		            	<label for="id"><strong>ID</strong>, like a drivers license or passport</label></li>
+		            	<li><input name="residence" id="residence" type="checkbox" value="residence"/>
 	            	<label for="residence">Proof of <strong>residence</strong> in San Francisco, like a driver's license or bill</label></li>
-
-	            	<li><input name="income" id="income" type="checkbox" value="income"/>
-	            	<label for="income">Proof of all <strong>income</strong> for the past 30 days, like wage stubs</label></li>
-
-	            	<li><input name="payments" id="payments" type="checkbox" value="payments"/>
-	            	<label for="payments"><strong>Receipts</strong> for rent, utilities, medical bills, and child support payments</label></li>
+		            </ul>
+		            <li>Monthly income from all sources</li>
+	            	<ul class="unstyled offset1">
+		            	<li><input name="income" id="income" type="checkbox" value="income"/>
+		            	<label for="income">Proof of all <strong>income</strong> for the past 30 days, like wage stubs</label></li>
+	            	</ul>
+	            	<li>Monthly rent, utilities, and other bills</li>
+	            	<ul class="unstyled offset1">
+		            	<li><input name="payments" id="payments" type="checkbox" value="payments"/>
+		            	<label for="payments"><strong>Receipts</strong> for rent, utilities, medical bills, and child support payments</label></li>
+								</ul>
 	            </ul>
 				    </div>
 					</div>
@@ -151,7 +158,7 @@
 					</form>
 
 	        	</div>
-	        	<div class="span3 well">
+	        	<div class="span3">
 	        	</div>
     		</div>
     	  </div> <!--end next steps row-->
@@ -231,6 +238,7 @@
   </body>
   <script>
   	$(function() {
+  		$("[rel='tooltip']").tooltip();
   		$('.nav li a').click(function(){
   			activeStyle($(this).attr('href'));
   		});
@@ -287,7 +295,7 @@
   	});
   	
   	$(activeEl).css('color','#000');
-  	$(activeEl+' h2').css('color','#333');
+  	$(activeEl+' h2').css('color','#444');
   	$(activeEl+' .span8').css({
   		'border-left':'5px solid #ccc'
   	});

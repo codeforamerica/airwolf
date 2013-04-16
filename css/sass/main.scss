@@ -15,15 +15,11 @@ h2 {
 	font-weight: 400;
 }
 
-.sideRight {
-	border: #eee solid 1px;
-	h3 {
-		background:#eee;
-		margin: 0px;
-		padding: 5px
-	}
-	ul{
-		padding: 5px;
+//Custom css for this site
+.docList {
+	margin-top: 20px;
+	li {
+		margin: 5px 0px;
 	}
 }
 
@@ -41,26 +37,16 @@ h2 {
 	position: fixed;
 }
 
-.navbar {
-	padding-bottom: 30px;
-}
-.navbar-inner {
-	min-height: 42px;
-}
-
-.navbar-inverse .nav .active>a {
-	color: #111;
-	background: #fff;
-	&:hover{
-		color: #111;
-		background: #fff;
+.sideRight {
+	border: #eee solid 1px;
+	h3 {
+		background:#eee;
+		margin: 0px;
+		padding: 5px
 	}
-}
-
-.navbar-inverse .nav>a {
-	color: #111;
-	background: #fff;
-	&:hover{color: red;}
+	ul{
+		padding: 5px;
+	}
 }
 
 .spacer {
@@ -102,10 +88,42 @@ h2 {
 	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
 	  background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* W3C */
 	  border: 1px solid #e5e5e5;
-	  -webkit-border-radius: 4px;
-	     -moz-border-radius: 4px;
-	          border-radius: 4px;
+}
+
+
+// Bootstrap overrides 
+.hero-unit {
+	padding: 30px 60px;
+	margin-bottom: 0px;
+	h1 {
+		margin-bottom: 12px
 	}
+}
+
+.navbar {
+	padding-bottom: 30px;
+}
+.navbar-inner {
+	min-height: 42px;
+	border-radius: 0px;
+}
+
+.navbar-inverse .nav .active>a {
+	color: #111;
+	background: #fff;
+	text-shadow: 0 -1px 0 rgba(200, 200, 200 ,0.25);
+	&:hover{
+		color: #111;
+		background: #fff;
+	}
+}
+
+.navbar-inverse .nav>a {
+	color: #111;
+	background: #fff;
+	&:hover{color: red;}
+}
+
 // 	.subnav .nav {
 // 	  margin-bottom: 0;
 // 	}
