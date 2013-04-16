@@ -129,6 +129,11 @@ a[rel="popover"]:hover {
 	&:hover{color: red;}
 }
 
+.radio input[type="radio"]{
+	float: none;
+	margin: 5px;
+}
+
 // 	.subnav .nav {
 // 	  margin-bottom: 0;
 // 	}

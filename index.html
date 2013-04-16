@@ -88,7 +88,7 @@
 	    		</div>
 			</div> <!--end step 1 row -->
  
-		<div id="step3" class="row-fluid stepRow"> <!-- step 2 row-->
+		<div id="step3" class="row-fluid stepRow"> <!-- step 3 row-->
 		  	<div class="offset1 spacer">
 			  	<div class="span8">
 						<h2><span class="step">Step 3:</span> Send documents</h2>
@@ -112,10 +112,10 @@
 	            	</ul>
 		        	</div>
 	    		</div>
-    	</div> <!--end step 2 row-->
+    	</div> <!--end step 3 row-->
 
 
-		<div id="step4" class="row-fluid stepRow"> <!-- step 3 row-->
+		<div id="step4" class="row-fluid stepRow"> <!-- step 4 row-->
 		  	<div class="offset1 spacer">
 			  	<div class="span8">
 			  		<h2><span class="step">Step 4:</span> Interview</h2>
@@ -141,7 +141,22 @@
 						</ul>
 					</div>
 				</div>
-    	</div> <!--end step 3 row-->
+    	</div> <!--end step 4 row-->
+    	<div id="feedback" class="row-fluid"><!--begin feedback row-->
+	    	<div class="span8 offset1">
+	    		<h3>Was this helpful?</h3>
+	    		<form>
+		    		<div>
+		    			<label class="radio">
+						  <input type="radio" name="helpfulYes" id="helpfulYes" value="helpfulYes">Yes</label>
+							<label class="radio">
+						  <input type="radio" name="helpfulNo" id="helpfulNo" value="helpfulNo">No</label>
+						 </div>
+					 </form>
+	    	</div>
+    	</div><!--end feedback row-->
+    	
+    	
 		  <div id="next" class="row-fluid stepRow"><!--begin next steps row-->
 		  	<div class="offset1 spacer">
 			  	<div class="span6">
@@ -269,22 +284,6 @@
 	        });
 	      }
 	    });
-
-
-	    //change the background color for all the same type of documents
-	    // $('input[type=checkbox]').change(function(){
-	    // 	$('input:not(:checked)').each(function(){
-    	// 		var docText = $(this).attr('name');
-    	// 		$('li span.'+docText).addClass('btn-danger');
-    	// 		$('li span.'+docText).removeClass('btn-success');
-	    // 	}); 
-	    // 	$('input:checked').each(function(){
-    	// 		var docText = $(this).attr('name');
-    	// 		// change button color
-    	// 		$('li span.'+docText).addClass('btn-success');
-    	// 		$('li span.'+docText).removeClass('btn-danger');
-	    // 	}); 
-	    // });
 		});
 
 	//changes the styling of the active nav element (based on spy-scroll)

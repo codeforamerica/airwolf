@@ -165,3 +165,9 @@ a[rel="popover"]:hover {
 .navbar-inverse .nav > a:hover {
   color: red;
 }
+
+/* line 132, ../sass/main.scss */
+.radio input[type="radio"] {
+  float: none;
+  margin: 5px;
+}
