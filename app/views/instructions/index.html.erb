@@ -5,7 +5,7 @@
     <th>Name</th>
     <th>Step</th>
     <th>Description</th>
-    <th></th>
+    <th>Documents</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,6 +15,7 @@
     <td><%= instruction.name %></td>
     <td><%= instruction.step %></td>
     <td><%= instruction.description %></td>
+    <td><%= instruction.documents %></td>
     <td><%= link_to 'Show', instruction %></td>
     <td><%= link_to 'Edit', edit_instruction_path(instruction) %></td>
     <td><%= link_to 'Destroy', instruction, method: :delete, data: { confirm: 'Are you sure?' } %></td>

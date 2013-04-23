@@ -21,15 +21,26 @@
         	</div> <!--end intro text-->
 	  	  </div> <!--end intro row-->
 	  	  <% @instructions.each do |instruction| %>
-	  	  <div id="step1" class="row-fluid spacer stepRow">
-					<div class="span8 offset1">
-						<h2><span class="step">Step <%= instruction.step %>:</span> <%= instruction.name %></h2>
-						<p><%= instruction.description %></p>
+	  	  <div id="step1" class="row-fluid stepRow"> <!-- step one row -->
+	    		<div class="offset1 spacer">
+	        	<div class="span8">
+							<h2><span class="step">Step <%= instruction.step %>:</span> <%= instruction.name %></h2>
+							<p><%= instruction.description.html_safe %></p>
+						</div>
+					<% if instruction.documents? %>
+						<div class="span4 well">
+		        	<h5>Things you need for this step</h5>
+	        		<ul class="unstyled">
+								<li><%= instruction.documents %></li>
+							</ul>
+						</div>
+					<% end %>
 					</div>
+					<span class="pull-right"><%= link_to 'edit', edit_instruction_path(instruction) %></span>
 				</div>
 	  	  	
 	  	  <% end %>
-	  	  <div id="step1" class="row-fluid spacer stepRow">
+	  	  <div id="step1" class="row-fluid spacerstepRow">
 					<!-- <div class="span8 offset1">
 						<h2><span class="step">Step 1:</span> Gather your documents</h2>
 						<p>To approve your application, we will need some information about you and your household. There are a few categories of information; we've listed the categories here, with some suggestions of documents to verify your information. We may ask you for more documents if we need more information, but you should ask for the reason if we ask for anything beyond the items below.</p>
