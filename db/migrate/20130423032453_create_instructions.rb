@@ -4,6 +4,8 @@ class CreateInstructions < ActiveRecord::Migration
       t.string :name
       t.string :step
       t.text :description
+      t.integer :program_id
+
 
       t.timestamps
     end

@@ -14,6 +14,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/1.json
   def show
     @instruction = Instruction.find(params[:id])
+    @program = Program.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
