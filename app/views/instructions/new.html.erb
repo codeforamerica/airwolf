@@ -1,5 +1,9 @@
-<h1>New instruction</h1>
+<%= render 'layouts/topnav' %>
+<h1>New step</h1>
+<div class="container-fluid">
+	<div class="row-fluid span12">
+		<%= render 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', instructions_path %>
+		<span class="pull-left"><%= link_to 'Back', instructions_path, :class => 'btn btn-default' %></span>
+	</div>
+</div>

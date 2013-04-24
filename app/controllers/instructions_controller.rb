@@ -25,6 +25,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/new.json
   def new
     @instruction = Instruction.new
+    @program = Program.find(:all, :order=>"name")
 
     respond_to do |format|
       format.html # new.html.erb

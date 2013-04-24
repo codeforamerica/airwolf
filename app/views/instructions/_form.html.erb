@@ -1,4 +1,4 @@
-<%= form_for(@instruction) do |f| %>
+<%= form_for @instruction, :html => { :class => 'form-horizontal span8' } do |f| %>
   <% if @instruction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@instruction.errors.count, "error") %> prohibited this instruction from being saved:</h2>
@@ -12,22 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class=>'span5' %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :step %><br />
-    <%= f.text_field :step %>
+    <div class="control-group">
+      <%= f.label :step, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :step, :class=>'span5', :placeholder =>"step number for this step (1,2, etc.)" %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <div class="control-group">
+      <%= f.label :description, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :description, :class=>'span6', :rows=>4 %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :documents %><br />
-    <%= f.text_area :documents %>
+    <div class="control-group">
+      <%= f.label :documents, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :documents, :class=>'span6', :rows=>3, :placeholder => "List all documents needed for this step" %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <!-- <div class="actions"> -->
+    <span class="span3 offset5"><%= f.submit :class => 'btn btn-primary' %></span>
+  <!-- </div> -->
 <% end %>
