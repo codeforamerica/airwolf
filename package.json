@@ -1,0 +1,3 @@
+"scripts": {
+    "test": "jasmine-node testing/*.spec.js"
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <link href="css/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+	  <link href="css/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<link href="css/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <!--[if IE]>
+	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <![endif]-->
+  </head>
+  <body>
+  	<div class="navbar">
+		  <div class="navbar-inner">
+		    <a class="brand" href="index.html">CalFresh helper</a>
+		  </div>
+		</div><!-- end nav-bar-->
+		<div class="container-fluid">
+		  <div class="row-fluid">
+		    <div class="span2">
+		      <!--Sidebar content-->
+		      <div class="well-special">
+					  <ul class="nav nav-list">
+					  	<li class="nav-header">Application steps</li>
+					    <li><a href="index.html" >Step 1 Prepare</a></li>
+					    <li><a href="step2.html">Step 2 Apply</a></li>
+					    <li><a href="step3.html">Step 3 Email documents</a></li>
+					    <li class="active"><a href="step4.html">Step 4 Interview</a></li>
+					    <li><a href="next.html">What's next?</a></li>
+					    <li><a href="questions.html">Questions</a></li>
+					  </ul>
+					</div>
+		    </div>
+		    <div class="well span6">
+            <h2>Step 4: Interview</h2>
+            <p>After submitting your application and emailing your documents, you will get a phone call to schedule a time for your interview. The interview will take about <b>one hour</b> can be in person or over the phone. It is your choice.</p>
+
+            	<p>Make sure you have these things with you during the interview:</p>
+            
+             <div class="row">
+            	<!-- Documents -->
+	            <ul class="offset1 unstyled">
+	            	<!-- <li><h5>Things you need</h5></li> -->
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>ID</b>, like a drivers license or passport</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof that you <b>live in San Francisco</b>, like a driver's license or bill</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank">Proof of all <b>income</b> for the past 30 days, like wage stubs</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Receipts</b> for rent, utilities, medical bills, and child support payments</label></li>
+
+	            	<li><input id="" type="checkbox" value=""/>
+	            	<label for"bank"><b>Social Security Numbers (SSNs)</b> for everyone who lives in your house that you buy and cook food with</label></li>
+	            </ul>
+            </div>
+
+            <p>At the end of the interview, we will tell you if you qualify for CalFresh or if we need more information.</p>
+
+            <a href="next.html" class="btn btn-primary pull-right">What's next?</a>
+		    </div>
+		    
+		    <div class="span3">
+		      <!--Sidebar content-->
+		      <!-- <div class="well-special">
+					  <ul class="nav nav-list">
+					  	<li class="nav-header">Important info</li>
+					    <li><a href="#">Address</a></li>
+					    <li><a href="#">Phone</a></li>
+					    <li><a href="#">Apply!</a></li>
+					  </ul>
+					</div>
+		    </div> -->
+		  </div>
+		</div>
+		
+		<!-- ID Modal -->
+		<div id="id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="incomeLabel" aria-hidden="true">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+		    <h3 id="incomeLabel">Identification</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>If you don't have a drivers license, that's okay. You can bring any ONE of these instead:</p>
+		    <ul>
+		    	<li>Birth certificate</li>
+		    	<li>Driver's license</li>
+		    	<li>Voter registration card</li>
+		    	<li>School records</li>
+		    	<li>U.S. Passport</li>
+		    </ul>
+		  </div>
+		
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		  </div>
+		</div>
+  </body>
+    <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-40052704-1', 'github.io');
+		  ga('send', 'pageview');
+
+		</script>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <link href="css/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+	  <link href="css/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<link href="css/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <!--[if IE]>
+	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <![endif]-->
+  </head>
+  <body>
+  	<div class="navbar">
+		  <div class="navbar-inner">
+		    <a class="brand" href="index.html">CalFresh helper</a>
+		  </div>
+		</div><!-- end nav-bar-->
+		<div class="container-fluid">
+		  <div class="row-fluid">
+		    <div class="span2">
+		      <!--Sidebar content-->
+		      <div class="well-special">
+					  <ul class="nav nav-list">
+					  	<li class="nav-header">Application steps</li>
+					    <li><a href="index.html" >Step 1 Applying</a></li>
+					    <li><a href="step2.html">Step 2 Interview</a></li>
+					    <li><a href="step3.html">Step 3 Decision</a></li>
+					    <li class="active"><a href="checklist.html">Checklist</a></li>
+					  </ul>
+					</div>
+		    </div>
+		    <div class="well span6">
+            <h2>CalFresh application checklist</h2>
+            <div class="row">
+            	<!-- income -->
+	            <ul class="span3 offset1 unstyled">
+	            	<li><h6>Income documentation</h6></li>
+	            	<li><input id="stubs" type="checkbox" value="stubs"/>
+	            	<label for"stubs">pay stubs</label></li>
+	            	<li><input id="checks" type="checkbox" value="checks"/>
+	            	<label for"checks">voided checks</label></li>
+	            	<li><input id="incomeother" type="checkbox" value="incomeother"/>
+	            	<label for"incomeother">other things</label></li>
+	            </ul>
+	            <!-- identity -->
+<!-- 	            <ul class="span3 offset1 unstyled">
+	            	<li><h6>Identity documentation</h6></li>
+	            	<li><input id="mail" type="checkbox" value="mail"/>
+	            	<label for"mail">mail</label></li>
+	            	<li><input id="license" type="checkbox" value="license"/>
+	            	<label for"license">drivers license</label></li>
+	            	<li><input id="ssn" type="checkbox" value="ssn"/>
+	            	<label for"ssn">social security card</label></li>
+	            </ul> -->
+            </div>
+            <div class="row">
+            <!-- assets -->
+	            <ul class="span3 offset1 unstyled">
+	            	<li><h6>Asset documentation</h6></li>
+	            	<li><input id="bank" type="checkbox" value="bank"/>
+	            	<label for"bank">bank statements</label></li>
+	            	<li><input id="taxes" type="checkbox" value="taxes"/>
+	            	<label for"taxes">taxes</label></li>
+	            	<li><input id="assetsother" type="checkbox" value="assetsother"/>
+	            	<label for"assetsother">other things</label></li>
+	            </ul>
+            </div>
+		    </div>
+		    <div class="span3">
+		      <!--Sidebar content-->
+		      <div class="well-special">
+					  <ul class="nav nav-list">
+					  	<li class="nav-header">Important info</li>
+					    <li><a href="#">Address</a></li>
+					    <li><a href="#">Phone</a></li>
+					    <li><a href="#">Apply!</a></li>
+					  </ul>
+					</div>
+		    </div>
+		  </div>
+		</div>
+  </body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40052704-1', 'github.io');
+  ga('send', 'pageview');
+
+</script>
+</html>
