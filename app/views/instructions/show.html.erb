@@ -5,9 +5,8 @@
     <div class="container-fluid">
         <div class="row-fluid">
           <div class="span12 hero-unit">
-            <h1>Applying for <%= a.name %></h1>
-            <h4>Calfresh helps you buy food, and we want to help you apply for CalFresh</h4>
-            <p>Applying can be confusing, so we created this guide to walk you through applying for CalFresh. We've tried to make the process understandable, but let us know if you have any problems! You can call the CalFresh Call Center at <strong>(415) 558-1001</strong> or email us at <strong><a href="mailto:food@sfgov">food@sfgov.org</a></strong>.</p>
+            <h1><%= @instruction.name %></h1>
+            <p><%= @instruction.description.html_safe %></p>
           </div> <!--end intro text-->
         </div> <!--end intro row-->
         <% @instruction.steps.each_with_index do |step, index| %>
@@ -16,7 +15,7 @@
           <div class="offset1 spacer">
             <div class="span8">
               <h2><span class="step">Step <%= index + 1 %>:</span> <%= step.name %></h2>
-              <p><%= step.description %></p>
+              <p><%= step.description.html_safe %></p>
             </div>
           <% if step.docs? %>
             <div class="span4 well">
