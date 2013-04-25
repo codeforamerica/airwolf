@@ -3,6 +3,8 @@ class NeedsController < ApplicationController
   # GET /needs.json
   def index
     @needs = Need.all
+    @instruction = @program.instructions
+    binding.pry
 
     respond_to do |format|
       format.html # index.html.erb

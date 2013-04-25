@@ -3,7 +3,7 @@ class ProgramsController < ApplicationController
   # GET /programs.json
   def index
     @programs = Program.all
-
+# binding.pry
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @programs }
@@ -15,7 +15,7 @@ class ProgramsController < ApplicationController
   def show
     @program = Program.find(params[:id])
     @instruction = @program.instructions
-    binding.pry
+    
 
     respond_to do |format|
       format.html # show.html.erb

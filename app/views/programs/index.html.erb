@@ -1,26 +1,23 @@
-<h1>Listing programs</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @programs.each do |program| %>
-  <tr>
-    <td><%= program.name %></td>
-    <td><%= program.description %></td>
-    
-    <td><%= link_to 'Show', program %></td>
-    <td><%= link_to 'Edit', edit_program_path(program) %></td>
-    <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <h1>All programs</h1>
+    <div class="span12">
+      <% @programs.each do |program| %>
+      <div class="span8 offset1">
+        <h2>Program name: <span><%= link_to program.name, program, :class => 'step' %></span></h2>
+        <h5><%= program.description %></h5>
+        <% a = Instruction.find program.instruction_id %>
+        <h5><%= link_to a.name, program_instruction_path(program, program.instruction_id) %></h5>
+      </div>    
 
-<br />
+<!--       <td><%= link_to 'Show', program %></td>
+      <td><%= link_to 'Edit', edit_program_path(program) %></td>
+      <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'New Program', new_program_path %>
+<%= link_to 'New Program', new_program_path, :class => 'btn btn-primary offset5' %>
