@@ -6,10 +6,10 @@ Helper::Application.routes.draw do
   resources :needs
 
 
-  resources :programs
+  # resources :programs
 
 
-  resources :instructions
+  # resources :instructions
 
 
   resources :users
@@ -22,6 +22,10 @@ Helper::Application.routes.draw do
   get "static_pages/about"
 
   get "static_pages/contact"
+
+  resources :programs do
+    resources :instructions, :path => 'instructions'
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

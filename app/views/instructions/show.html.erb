@@ -1,7 +1,7 @@
 <% a = Program.find @instruction.program_id %>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="200">
-    <%= render 'layouts/topnav' %>
+    <%= render 'topnav' %>
     <div class="container-fluid">
         <div class="row-fluid">
           <div class="span12 hero-unit">
@@ -27,7 +27,7 @@
             </div>
           <% end %>
           </div>
-          <span class="pull-right"><%= link_to 'edit', edit_instruction_path(@instruction) %></span>
+          <span class="pull-right"><%= link_to 'edit', edit_program_instruction_path(@instruction) %></span>
         </div>
           
         <% end %>
@@ -105,8 +105,8 @@
             </div>
           </div>
         </div>
-        <%= link_to 'Edit', edit_instruction_path(@instruction) %> |
-<%= link_to 'Back', instructions_path %>
+        <%= link_to 'Edit', edit_program_instruction_path(@instruction) %> |
+        <%= link_to 'Back', program_instruction_path %>
 
 
     

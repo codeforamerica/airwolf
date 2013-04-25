@@ -15775,3 +15775,4 @@ Migrating to AddDocsIdToSteps (20130425003824)
   [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130425003824')[0m
   [1m[35m (0.8ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml

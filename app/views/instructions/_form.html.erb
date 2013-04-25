@@ -1,4 +1,4 @@
-<%= form_for @instruction, :html => { :class => 'form-horizontal span8' } do |f| %>
+<%= form_for @instruction, url: program_instruction_path, :html => { :class => 'form-horizontal span8' } do |f| %>
   <% if @instruction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@instruction.errors.count, "error") %> prohibited this instruction from being saved:</h2>

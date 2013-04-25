@@ -38,6 +38,10 @@ class InstructionsController < ApplicationController
   # GET /instructions/1/edit
   def edit
     @instruction = Instruction.find(params[:id])
+
+    3.times do
+      step = @instruction.steps.build
+    end
   end
 
   # POST /instructions
@@ -63,7 +67,7 @@ class InstructionsController < ApplicationController
 
     respond_to do |format|
       if @instruction.update_attributes(params[:instruction])
-        format.html { redirect_to @instruction, notice: 'Instruction was successfully updated.' }
+        format.html { redirect_to program_instruction_path, notice: 'Instruction was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
