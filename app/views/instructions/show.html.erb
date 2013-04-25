@@ -1,129 +1,127 @@
 <% a = Program.find @instruction.program_id %>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="200">
-    <%= render 'topnav' %>
-    <div class="container-fluid">
-        <div class="row-fluid">
-          <div class="span12 hero-unit">
-            <h1><%= @instruction.name %></h1>
-            <p><%= @instruction.description.html_safe %></p>
-          </div> <!--end intro text-->
-        </div> <!--end intro row-->
-        <% @instruction.steps.each_with_index do |step, index| %>
-        <% counter = index +1 %>
-        <div id="step<%= counter%>" class="row-fluid stepRow"> <!-- step one row -->
-          <div class="offset1 spacer">
-            <div class="span8">
-              <h2><span class="step">Step <%= index + 1 %>:</span> <%= step.name %></h2>
-              <p><%= step.description.html_safe %></p>
-            </div>
-          <% if step.docs? %>
-            <div class="span4 well">
-              <h5>Things you need for this step</h5>
-              <ul class="unstyled">
-                <li><%= step.docs %></li>
-              </ul>
-            </div>
-          <% end %>
-          </div>
+<%= render 'topnav' %>
+<div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12 hero-unit">
+        <h1><%= @instruction.name %></h1>
+        <p><%= @instruction.description.html_safe %></p>
+      </div> <!--end intro text-->
+    </div> <!--end intro row-->
+    <% @instruction.steps.each_with_index do |step, index| %>
+    <% counter = index +1 %>
+    <div id="step<%= counter%>" class="row-fluid stepRow"> <!-- step one row -->
+      <div class="offset1 spacer">
+        <div class="span8">
+          <h2><span class="step">Step <%= index + 1 %>:</span> <%= step.name %></h2>
+          <p><%= step.description.html_safe %></p>
         </div>
-        <% end %>
-
-      <div id="next" class="row-fluid stepRow"><!--begin next steps row-->
-        <div class="offset1 spacer">
-          <div class="span6">
-          <h2>What's next?</h2>
-                <p>[Quarterly report description]</p>
-                <p>[Annual report description]</p>
-                <!-- BODY GOES HERE -->
-                <p>Do you want to receive text message reminders on your cell phone when your reports are due?</p>
-          <form>
-            <fieldset>
-              <label>Cell Phone Number</label>
-              <input type="text" placeholder="(555) 206-8727">
-              <button type="submit" class="button">Submit</button>
-              <a href="#">Clear</a>
-            </fieldset>
-          </form>
-
-            </div>
-            <div class="span3">
-            </div>
+      <% if step.docs? %>
+        <div class="span4 well">
+          <h5>Things you need for this step</h5>
+          <ul class="unstyled">
+            <li><%= step.docs %></li>
+          </ul>
         </div>
-        </div> <!--end next steps row-->
-        
-        <div id="questions" class="row-fluid">
-          <div class="offset1 spacer">
-            <div class="well">
-              <h2>Questions</h2>
-              <div class="alert">
-                <p>If this page doesn't answer your questions, give us a call. <h5>(877) 366-3076</h5></p>
-              </div>
-              <h5>Who should I include in the application?</h5>
-              <p>Everyone who lives in your house, who you purchase and prepare food with.</p>
-
-              <h5>Do you really need the Social Security Number of everyone in my house?</h5>
-              <p>Yes, as long as you purchase and prepare food with them. If someone is not a citizen or Legal Permanent resident, you can leave them off the application.</p>
-
-              <h5>I'm a veteran. Does this change anything?</h5>
-              <p>No. Just apply as normal.</p>
-
-              <h5>I'm receiving Supplemental Security Income (SSI). Should I still apply?</h5>
-              <p>No. You aren't eligible if you're receiving SSI. Make sure you are actually receiving SSI and not some other form of income from the Social Security Agency.</p>
-
-              <h5>I'm not a US citizen or Legal Permanent Resident. Should I still apply?</h5>
-              <p>No. You have to be a citizen or Legal Permanent Resident to get CalFresh. However, if you have a US born child, you can apply for them.</p>
-
-              <h5>I'm an undocumented immigrant with a US born child. Can I apply for my child?</h5>
-              <p>Yes. Just leave yourself off the application.</p>
-
-              <h5>I have a Green Card. Should I still apply?</h5>
-              <p>Yes.</p>
-
-              <h5>Does it matter if I have money in a savings account?</h5>
-              <p>No. We don't look at how much money you have saved up.</p>
-
-              <h5>After I apply, what happens next?</h5>
-              <p>Someone will call you on the phone to schedule a time for the interview.</p>
-
-              <h5>Can I do the interview over the phone?</h5>
-              <p>Both! We can do the interview over the phone or in person at 1235 Mission Street, San Francisco.</p>
-
-              <h5>What if I'm traveling abroad?</h5>
-              <p>If you are traveling or living outside of San Francisco for more than 30 days, you will lose CalFresh.</p>
-
-              <h5>What holidays are you closed?</h5>
-              <p>New Year’s Day, MLK, President’s Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veteran’s Day, Thanksgiving and day after, Christmas</p>
-
-              <h5>How can I bring proof of income if I don't have any income?</h5>
-              <p>Just tell us. We will write this down and ask you to sign.</p>
-            </div>
-          </div>
-        </div>
-        <%= link_to 'Edit', edit_program_instruction_path(@instruction) %> |
-        <%= link_to 'Back', program_instruction_path %>
-
-
-    
-    <!-- ID Modal -->
-    <div id="id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="incomeLabel" aria-hidden="true">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
-        <h3 id="incomeLabel">Identification</h3>
-      </div>
-      <div class="modal-body">
-        <p>If you don't have a drivers license, that's okay. You can bring any ONE of these instead:</p>
-        <ul>
-          <li>Birth certificate</li>
-          <li>Driver's license</li>
-          <li>Voter registration card</li>
-          <li>School records</li>
-          <li>U.S. Passport</li>
-        </ul>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <% end %>
       </div>
     </div>
-  </body>
+    <% end %>
+
+  <div id="next" class="row-fluid stepRow"><!--begin next steps row-->
+    <div class="offset1 spacer">
+      <div class="span6">
+      <h2>What's next?</h2>
+            <p>[Quarterly report description]</p>
+            <p>[Annual report description]</p>
+            <!-- BODY GOES HERE -->
+            <p>Do you want to receive text message reminders on your cell phone when your reports are due?</p>
+      <form>
+        <fieldset>
+          <label>Cell Phone Number</label>
+          <input type="text" placeholder="(555) 206-8727">
+          <button type="submit" class="button">Submit</button>
+          <a href="#">Clear</a>
+        </fieldset>
+      </form>
+
+        </div>
+        <div class="span3">
+        </div>
+    </div>
+    </div> <!--end next steps row-->
+    
+    <div id="questions" class="row-fluid">
+      <div class="offset1 spacer">
+        <div class="well">
+          <h2>Questions</h2>
+          <div class="alert">
+            <p>If this page doesn't answer your questions, give us a call. <h5>(877) 366-3076</h5></p>
+          </div>
+          <h5>Who should I include in the application?</h5>
+          <p>Everyone who lives in your house, who you purchase and prepare food with.</p>
+
+          <h5>Do you really need the Social Security Number of everyone in my house?</h5>
+          <p>Yes, as long as you purchase and prepare food with them. If someone is not a citizen or Legal Permanent resident, you can leave them off the application.</p>
+
+          <h5>I'm a veteran. Does this change anything?</h5>
+          <p>No. Just apply as normal.</p>
+
+          <h5>I'm receiving Supplemental Security Income (SSI). Should I still apply?</h5>
+          <p>No. You aren't eligible if you're receiving SSI. Make sure you are actually receiving SSI and not some other form of income from the Social Security Agency.</p>
+
+          <h5>I'm not a US citizen or Legal Permanent Resident. Should I still apply?</h5>
+          <p>No. You have to be a citizen or Legal Permanent Resident to get CalFresh. However, if you have a US born child, you can apply for them.</p>
+
+          <h5>I'm an undocumented immigrant with a US born child. Can I apply for my child?</h5>
+          <p>Yes. Just leave yourself off the application.</p>
+
+          <h5>I have a Green Card. Should I still apply?</h5>
+          <p>Yes.</p>
+
+          <h5>Does it matter if I have money in a savings account?</h5>
+          <p>No. We don't look at how much money you have saved up.</p>
+
+          <h5>After I apply, what happens next?</h5>
+          <p>Someone will call you on the phone to schedule a time for the interview.</p>
+
+          <h5>Can I do the interview over the phone?</h5>
+          <p>Both! We can do the interview over the phone or in person at 1235 Mission Street, San Francisco.</p>
+
+          <h5>What if I'm traveling abroad?</h5>
+          <p>If you are traveling or living outside of San Francisco for more than 30 days, you will lose CalFresh.</p>
+
+          <h5>What holidays are you closed?</h5>
+          <p>New Year’s Day, MLK, President’s Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veteran’s Day, Thanksgiving and day after, Christmas</p>
+
+          <h5>How can I bring proof of income if I don't have any income?</h5>
+          <p>Just tell us. We will write this down and ask you to sign.</p>
+        </div>
+      </div>
+    </div>
+    <%= link_to 'Edit', edit_program_instruction_path(@instruction) %> |
+    <%= link_to 'Back', program_instruction_path %>
+
+
+
+<!-- ID Modal -->
+<div id="id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="incomeLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> x </button>
+    <h3 id="incomeLabel">Identification</h3>
+  </div>
+  <div class="modal-body">
+    <p>If you don't have a drivers license, that's okay. You can bring any ONE of these instead:</p>
+    <ul>
+      <li>Birth certificate</li>
+      <li>Driver's license</li>
+      <li>Voter registration card</li>
+      <li>School records</li>
+      <li>U.S. Passport</li>
+    </ul>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
