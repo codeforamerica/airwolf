@@ -38,10 +38,6 @@ class InstructionsController < ApplicationController
   # GET /instructions/1/edit
   def edit
     @instruction = Instruction.find(params[:id])
-
-    3.times do
-      step = @instruction.steps.build
-    end
   end
 
   # POST /instructions

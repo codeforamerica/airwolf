@@ -1,16 +1,17 @@
-<%= f.label :name, "Name of step", :class => 'control-label' %>
-<div class="controls">
-  <%= f.text_field :name, :placeholder => "Apply, Call, etc." %>
-</div>
-<%= f.label :description, "Description of step", :class => 'control-label' %>
-<div class="controls">
-  <%= f.text_area :description, :rows=>5, :placeholder => "What do I do in this step?" %>
-</div>
-<%= f.label :docs, "Documentation needed for this step", :class => 'control-label' %>
-<div class="controls">
-  <%= f.text_area :docs, :rows=>5, :placeholder => "What do I need to bring at this step?" %>
-</div>
-<div class="controls">
-  <%= f.check_box :_destroy %>
-  <%= f.label :_destroy,  "Remove this step" %>
+<div class="steps">
+	<%= f.label :name, "Name of step", :class => 'control-label' %>
+	<div class="controls">
+	  <%= f.text_field :name, :placeholder => "Apply, Call, etc." %>
+	</div>
+	<%= f.label :description, "Description of step", :class => 'control-label' %>
+	<div class="controls">
+	  <%= f.text_area :description, :rows=>5, :placeholder => "What do I do in this step?" %>
+	</div>
+	<%= f.label :docs, "Documentation needed for this step", :class => 'control-label' %>
+	<div class="controls">
+	  <%= f.text_area :docs, :rows=>5, :placeholder => "What do I need to bring at this step?" %>
+	</div>
+	<div class="controls">
+		<div class="btn btn-danger btn-small offset3"><%= link_to_remove_fields "remove", f %></div>
+	</div>
 </div>
