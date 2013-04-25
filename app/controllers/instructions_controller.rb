@@ -14,7 +14,6 @@ class InstructionsController < ApplicationController
   # GET /instructions/1.json
   def show
     @instruction = Instruction.find(params[:id])
-    @program = Program.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,8 +25,10 @@ class InstructionsController < ApplicationController
   # GET /instructions/new.json
   def new
     @instruction = Instruction.new
-    @program = Program.find(:all, :order=>"name")
-
+    3.times do
+      step = @instruction.steps.build
+    end
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @instruction }

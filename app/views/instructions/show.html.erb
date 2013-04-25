@@ -20,7 +20,8 @@
 </p>
 <p>
   <b>Program name:</b>
-  <%= @program.name %>
+  <% a = Program.find @instruction.program_id %>
+  <%= a.name %>
 </p>
 
 

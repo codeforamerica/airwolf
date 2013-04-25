@@ -1,5 +1,8 @@
 Helper::Application.routes.draw do
 
+  resources :steps
+
+
   resources :needs
 
 

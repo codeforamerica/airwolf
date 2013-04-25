@@ -13591,3 +13591,2169 @@ Served asset /helper.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 20:46:47 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130423032353)
+Migrating to CreateInstructions (20130423032453)
+Migrating to CreatePrograms (20130423032814)
+Migrating to CreateNeeds (20130423212633)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "needs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130423212633')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddColunumDocsToInstructions (20130423214635)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "instructions" ADD "documents" text
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130423214635')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddProgramIdToInstruction (20130424163450)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "instructions" ADD "program_id" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130424163450')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateSteps (20130424205904)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "steps" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "stepnumber" integer, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130424205904')[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130423032353)
+Migrating to CreateInstructions (20130423032453)
+Migrating to CreatePrograms (20130423032814)
+Migrating to CreateNeeds (20130423212633)
+Migrating to AddColunumDocsToInstructions (20130423214635)
+Migrating to AddProgramIdToInstruction (20130424163450)
+Migrating to CreateSteps (20130424205904)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130423032353)
+Migrating to CreateInstructions (20130423032453)
+Migrating to CreatePrograms (20130423032814)
+Migrating to CreateNeeds (20130423212633)
+Migrating to AddColunumDocsToInstructions (20130423214635)
+Migrating to AddProgramIdToInstruction (20130424163450)
+Migrating to CreateSteps (20130424205904)
+Migrating to AddInstructionIdToSteps (20130424211933)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "steps" ADD "instruction_id" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130424211933')[0m
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130423032353)
+Migrating to CreateInstructions (20130423032453)
+Migrating to CreatePrograms (20130423032814)
+Migrating to CreateNeeds (20130423212633)
+Migrating to AddColunumDocsToInstructions (20130423214635)
+Migrating to AddProgramIdToInstruction (20130424163450)
+Migrating to CreateSteps (20130424205904)
+Migrating to AddInstructionIdToSteps (20130424211933)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130423032353)
+Migrating to CreateInstructions (20130423032453)
+Migrating to CreatePrograms (20130423032814)
+Migrating to CreateNeeds (20130423212633)
+Migrating to AddColunumDocsToInstructions (20130423214635)
+Migrating to AddProgramIdToInstruction (20130424163450)
+Migrating to CreateSteps (20130424205904)
+Migrating to AddInstructionIdToSteps (20130424211933)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2013-04-24 16:23:28 -0700
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.2ms)[0m  [1mSELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mInstruction Load (0.1ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."program_id" = 1
+  Rendered programs/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34404ms (Views: 129.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:24:02 -0700
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:24:02 -0700
+Served asset /sass/main.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /bootstrap.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /helper.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:24:03 -0700
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:36:05 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.5ms)
+  Rendered instructions/_form.html.erb (12.8ms)
+  Rendered instructions/new.html.erb within layouts/application (38.5ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff975eac7e0>):
+    19:       </div>
+    20:     </div>
+    21:   </div>
+    22:   <!-- <%= f.select :program, Program::name %> -->
+    23:   <div class="field">
+    24:     <div class="control-group">
+    25:       <%= f.fields_for :steps do |builder| %>
+  app/views/instructions/_form.html.erb:22:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354694720180'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354694720180'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:36:32 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered instructions/_form.html.erb (2.9ms)
+  Rendered instructions/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff977b296e8>):
+    19:       </div>
+    20:     </div>
+    21:   </div>
+    22:   <!-- <%= f.select :program, Program::name %> -->
+    23:   <div class="field">
+    24:     <div class="control-group">
+    25:       <%= f.fields_for :steps do |builder| %>
+  app/views/instructions/_form.html.erb:22:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354694863140'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354694863140'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:36:33 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered instructions/_form.html.erb (1.5ms)
+  Rendered instructions/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff97535eff0>):
+    19:       </div>
+    20:     </div>
+    21:   </div>
+    22:   <!-- <%= f.select :program, Program::name %> -->
+    23:   <div class="field">
+    24:     <div class="control-group">
+    25:       <%= f.fields_for :steps do |builder| %>
+  app/views/instructions/_form.html.erb:22:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354694863140'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354694863140'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:36:44 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered instructions/_form.html.erb (2.7ms)
+  Rendered instructions/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff974a0b4f8>):
+    19:       </div>
+    20:     </div>
+    21:   </div>
+    22:   <!-- <%= f.select :program, Program::name %> -->
+    23:   <div class="field">
+    24:     <div class="control-group">
+    25:       <%= f.fields_for :steps do |builder| %>
+  app/views/instructions/_form.html.erb:22:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354690180820'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354690180820'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:36:45 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered instructions/_form.html.erb (2.0ms)
+  Rendered instructions/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff975bb4b28>):
+    19:       </div>
+    20:     </div>
+    21:   </div>
+    22:   <!-- <%= f.select :program, Program::name %> -->
+    23:   <div class="field">
+    24:     <div class="control-group">
+    25:       <%= f.fields_for :steps do |builder| %>
+  app/views/instructions/_form.html.erb:22:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354690180820'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354690180820'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:36:55 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered instructions/_form.html.erb (5.1ms)
+  Rendered instructions/new.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Programs):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :instruction, Programs.all, :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354715121440'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354715121440'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:37:02 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (4.6ms)
+  Rendered instructions/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `instruction' for #<Instruction:0x007ff977b59af0>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :instruction, Program.all, :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354689718740'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354689718740'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:37:45 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (4.3ms)
+  Rendered instructions/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff973ed54f8>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :program, Program.find(:all), :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354695158120'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354695158120'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:38:47 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.2ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (5.9ms)
+  Rendered instructions/new.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `instruction' for #<Instruction:0x007ff9753f7098>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :instruction, Program.find(:all), :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354695382500'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354695382500'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:38:53 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (4.9ms)
+  Rendered instructions/new.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `programs' for #<Instruction:0x007ff977c31630>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :programs, Program.find(:all), :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354695551540'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354695551540'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:38:53 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (4.1ms)
+  Rendered instructions/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `programs' for #<Instruction:0x007ff975f8f978>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :programs, Program.find(:all), :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354695551540'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354695551540'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:38:54 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.2ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (5.3ms)
+  Rendered instructions/new.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `programs' for #<Instruction:0x007ff977a706e8>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.collection_select :programs, Program.find(:all), :id, :name, :prompt => "Select a Program" %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354695551540'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354695551540'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:41:01 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (4.2ms)
+  Rendered instructions/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `merge' for [["CalFresh", 1]]:Array):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select("instruction", "program_id", Program.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354684081920'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354684081920'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:41:02 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (3.1ms)
+  Rendered instructions/new.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `merge' for [["CalFresh", 1]]:Array):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select("instruction", "program_id", Program.all.collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354684081920'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354684081920'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:41:20 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (4.7ms)
+  Rendered instructions/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `merge' for #<Enumerator:0x007ff974b39e60>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select("instruction", "program_id", Program.all.collect, { :include_blank => true }) %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354690645420'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354690645420'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:41:21 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.2ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (4.0ms)
+  Rendered instructions/new.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `merge' for #<Enumerator:0x007ff9754378c8>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select("instruction", "program_id", Program.all.collect, { :include_blank => true }) %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354690645420'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354690645420'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/programs/1" for 127.0.0.1 at 2013-04-24 16:41:30 -0700
+Processing by ProgramsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered programs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12811ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:41:43 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (3.9ms)
+  Rendered instructions/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `merge' for #<Enumerator:0x007ff977ad1b50>):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select("instruction", "program_id", Program.all.collect) %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354715560480'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354715560480'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:43:34 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered instructions/_form.html.erb (4.0ms)
+  Rendered instructions/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 2..4)):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select :program_id %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354684076620'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354684076620'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:44:37 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.2ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (5.0ms)
+  Rendered instructions/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `merge' for :id:Symbol):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select :program_id, Program.all, :id, :name %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354689985900'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354689985900'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:44:38 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (3.2ms)
+  Rendered instructions/new.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `merge' for :id:Symbol):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select :program_id, Program.all, :id, :name %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354689985900'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354689985900'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:45:17 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (4.4ms)
+  Rendered instructions/new.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (wrong number of arguments (5 for 2..4)):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select :program_id, Program.all, :id, :name, :prompt => true %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354714319700'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354714319700'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:45:18 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (3.1ms)
+  Rendered instructions/new.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (wrong number of arguments (5 for 2..4)):
+    35:       </div>
+    36:     </div>
+    37:   </div>
+    38:   <%= f.select :program_id, Program.all, :id, :name, :prompt => true %>
+    39:   <div class="field">
+    40:     <div class="control-group">
+    41:       <%= f.label :documents, :class => 'control-label' %>
+  app/views/instructions/_form.html.erb:38:in `block in _app_views_instructions__form_html_erb__193481910066790577_70354714319700'
+  app/views/instructions/_form.html.erb:1:in `_app_views_instructions__form_html_erb__193481910066790577_70354714319700'
+  app/views/instructions/new.html.erb:5:in `_app_views_instructions_new_html_erb__2062026883151261347_70354714531020'
+  app/controllers/instructions_controller.rb:33:in `new'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (4.5ms)
+  Rendered instructions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:45:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/instructions" for 127.0.0.1 at 2013-04-24 16:45:47 -0700
+Processing by InstructionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"523qQjeC808kOURGmEZmmUTCxS6M8ADoOu47vG1Lt/M=", "instruction"=>{"name"=>"apply", "steps_attributes"=>{"0"=>{"name"=>"1"}, "1"=>{"name"=>"2"}, "2"=>{"name"=>"3"}}, "description"=>"", "program_id"=>"1", "documents"=>""}, "commit"=>"Create Instruction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (40.5ms)[0m  [1mINSERT INTO "instructions" ("created_at", "description", "documents", "name", "program_id", "step", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00], ["description", ""], ["documents", ""], ["name", "apply"], ["program_id", 1], ["step", nil], ["updated_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00], ["description", nil], ["instruction_id", 5], ["name", "1"], ["stepnumber", nil], ["updated_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00], ["description", nil], ["instruction_id", 5], ["name", "2"], ["stepnumber", nil], ["updated_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00], ["description", nil], ["instruction_id", 5], ["name", "3"], ["stepnumber", nil], ["updated_at", Wed, 24 Apr 2013 23:45:47 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/instructions/5
+Completed 302 Found in 51ms (ActiveRecord: 41.8ms)
+
+
+Started GET "/instructions/5" for 127.0.0.1 at 2013-04-24 16:45:47 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mInstruction Load (0.2ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mProgram Load (0.0ms)[0m  [1mSELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1[0m  [["id", "5"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Program with id=5):
+  app/controllers/instructions_controller.rb:17:in `show'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.9ms)
+
+
+Started POST "/instructions" for 127.0.0.1 at 2013-04-24 16:46:15 -0700
+Processing by InstructionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"523qQjeC808kOURGmEZmmUTCxS6M8ADoOu47vG1Lt/M=", "instruction"=>{"name"=>"apply", "steps_attributes"=>{"0"=>{"name"=>"1"}, "1"=>{"name"=>"2"}, "2"=>{"name"=>"3"}}, "description"=>"", "program_id"=>"1", "documents"=>""}, "commit"=>"Create Instruction"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "instructions" ("created_at", "description", "documents", "name", "program_id", "step", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00], ["description", ""], ["documents", ""], ["name", "apply"], ["program_id", 1], ["step", nil], ["updated_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00], ["description", nil], ["instruction_id", 6], ["name", "1"], ["stepnumber", nil], ["updated_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00], ["description", nil], ["instruction_id", 6], ["name", "2"], ["stepnumber", nil], ["updated_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00], ["description", nil], ["instruction_id", 6], ["name", "3"], ["stepnumber", nil], ["updated_at", Wed, 24 Apr 2013 23:46:15 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/instructions/6
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:46:15 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mInstruction Load (0.2ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1[0m  [["id", "6"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Program with id=6):
+  app/controllers/instructions_controller.rb:17:in `show'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:47:10 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mInstruction Load (0.1ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered instructions/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff977b784f0>):
+    20: </p>
+    21: <p>
+    22:   <b>Program name:</b>
+    23:   <%= @instruction.program.name %>
+    24: </p>
+    25: 
+    26: 
+  app/views/instructions/show.html.erb:23:in `_app_views_instructions_show_html_erb___4152203712276764983_70354695058260'
+  app/controllers/instructions_controller.rb:18:in `show'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:47:13 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered instructions/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `program' for #<Instruction:0x007ff9749ea910>):
+    20: </p>
+    21: <p>
+    22:   <b>Program name:</b>
+    23:   <%= @instruction.program.name %>
+    24: </p>
+    25: 
+    26: 
+  app/views/instructions/show.html.erb:23:in `_app_views_instructions_show_html_erb___4152203712276764983_70354695058260'
+  app/controllers/instructions_controller.rb:18:in `show'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:47:20 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mInstruction Load (0.1ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered instructions/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `programs' for #<Instruction:0x007ff974adb310>):
+    20: </p>
+    21: <p>
+    22:   <b>Program name:</b>
+    23:   <%= @instruction.programs.name %>
+    24: </p>
+    25: 
+    26: 
+  app/views/instructions/show.html.erb:23:in `_app_views_instructions_show_html_erb___4152203712276764983_70354690557000'
+  app/controllers/instructions_controller.rb:18:in `show'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.3ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.5ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:47:21 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered instructions/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `programs' for #<Instruction:0x007ff975dc0778>):
+    20: </p>
+    21: <p>
+    22:   <b>Program name:</b>
+    23:   <%= @instruction.programs.name %>
+    24: </p>
+    25: 
+    26: 
+  app/views/instructions/show.html.erb:23:in `_app_views_instructions_show_html_erb___4152203712276764983_70354690557000'
+  app/controllers/instructions_controller.rb:18:in `show'
+
+
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/Andy/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mInstruction Load (0.1ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered instructions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /sass/main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:47:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:54:15 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mProgram Load (2.1ms)[0m  SELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered instructions/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 114ms (Views: 94.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /application.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /sass/main.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /bootstrap.js - 304 Not Modified (43ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /helper.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:16 -0700
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered instructions/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /sass/main.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:54:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/instructions/6" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered instructions/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:10 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/instructions" for 127.0.0.1 at 2013-04-24 16:55:17 -0700
+Processing by InstructionsController#index as HTML
+  [1m[36mInstruction Load (0.3ms)[0m  [1mSELECT "instructions".* FROM "instructions" [0m
+  Rendered instructions/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:55:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/instructions/new" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Processing by InstructionsController#new as HTML
+  Rendered layouts/_topnav.html.erb (0.3ms)
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" 
+  Rendered instructions/_form.html.erb (9.5ms)
+  Rendered instructions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 92ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:21 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:22 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:22 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:22 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 16:59:22 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started POST "/instructions" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Processing by InstructionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"523qQjeC808kOURGmEZmmUTCxS6M8ADoOu47vG1Lt/M=", "instruction"=>{"name"=>"apply 2", "steps_attributes"=>{"0"=>{"name"=>"1"}, "1"=>{"name"=>"2"}, "2"=>{"name"=>"3"}}, "description"=>"askldjf;lk", "program_id"=>"1", "documents"=>""}, "commit"=>"Create Instruction"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "instructions" ("created_at", "description", "documents", "name", "program_id", "step", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00], ["description", "askldjf;lk"], ["documents", ""], ["name", "apply 2"], ["program_id", 1], ["step", nil], ["updated_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00], ["description", nil], ["instruction_id", 7], ["name", "1"], ["stepnumber", nil], ["updated_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00], ["description", nil], ["instruction_id", 7], ["name", "2"], ["stepnumber", nil], ["updated_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "steps" ("created_at", "description", "instruction_id", "name", "stepnumber", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00], ["description", nil], ["instruction_id", 7], ["name", "3"], ["stepnumber", nil], ["updated_at", Thu, 25 Apr 2013 00:00:12 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/instructions/7
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/instructions/7" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered instructions/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:12 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/instructions" for 127.0.0.1 at 2013-04-24 17:00:15 -0700
+Processing by InstructionsController#index as HTML
+  [1m[36mInstruction Load (0.2ms)[0m  [1mSELECT "instructions".* FROM "instructions" [0m
+  Rendered instructions/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 164ms (Views: 162.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[35mInstruction Load (0.2ms)[0m  SELECT "instructions".* FROM "instructions" 
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/instructions/7/edit" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Processing by InstructionsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mInstruction Load (0.1ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mStep Load (0.2ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."instruction_id" = 7
+  [1m[36mProgram Load (0.1ms)[0m  [1mSELECT "programs".* FROM "programs" [0m
+  Rendered instructions/_form.html.erb (5.8ms)
+  Rendered instructions/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/instructions/7" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Processing by InstructionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"523qQjeC808kOURGmEZmmUTCxS6M8ADoOu47vG1Lt/M=", "instruction"=>{"name"=>"apply 2", "steps_attributes"=>{"0"=>{"name"=>"1", "id"=>"17"}, "1"=>{"name"=>"2", "id"=>"18"}, "2"=>{"name"=>"3", "id"=>"19"}}, "description"=>"askldjf;lk", "program_id"=>"1", "documents"=>"doc 1"}, "commit"=>"Update Instruction", "id"=>"7"}
+  [1m[35mInstruction Load (0.1ms)[0m  SELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mStep Load (0.3ms)[0m  SELECT "steps".* FROM "steps" WHERE "steps"."instruction_id" = 7 AND "steps"."id" IN (17, 18, 19)
+  [1m[36m (0.3ms)[0m  [1mUPDATE "instructions" SET "documents" = 'doc 1', "updated_at" = '2013-04-25 00:00:34.148229' WHERE "instructions"."id" = 7[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/instructions/7
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/instructions/7" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Processing by InstructionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mInstruction Load (0.2ms)[0m  [1mSELECT "instructions".* FROM "instructions" WHERE "instructions"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mProgram Load (0.1ms)[0m  SELECT "programs".* FROM "programs" WHERE "programs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered instructions/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mInstruction Load (0.2ms)[0m  [1mSELECT "instructions".* FROM "instructions" [0m
+  Rendered layouts/_topnav.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/css/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /css/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sass/main.css?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /sass/main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/helper.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /helper.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-24 17:00:39 -0700
+Served asset /application.js - 304 Not Modified (0ms)

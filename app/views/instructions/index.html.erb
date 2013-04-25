@@ -14,10 +14,8 @@
 <% @instructions.each do |instruction| %>
   <tr>
     <td><%= instruction.name %></td>
-    <td><%= instruction.step %></td>
     <td><%= instruction.description %></td>
     <td><%= instruction.documents %></td>
-    <td><%= instruction.program.name %></td>
     <td><%= link_to 'Show', instruction %></td>
     <td><%= link_to 'Edit', edit_instruction_path(instruction) %></td>
     <td><%= link_to 'Destroy', instruction, method: :delete, data: { confirm: 'Are you sure?' } %></td>

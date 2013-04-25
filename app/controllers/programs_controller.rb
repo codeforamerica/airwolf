@@ -14,6 +14,8 @@ class ProgramsController < ApplicationController
   # GET /programs/1.json
   def show
     @program = Program.find(params[:id])
+    @instruction = @program.instructions
+    binding.pry
 
     respond_to do |format|
       format.html # show.html.erb

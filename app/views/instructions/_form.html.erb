@@ -19,13 +19,13 @@
       </div>
     </div>
   </div>
-  <%= f.select :program, Program::name %>
   <div class="field">
     <div class="control-group">
-      <%= f.label :step, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :step, :class=>'span5', :placeholder =>"step number for this step (1,2, etc.)" %>
-    </div>
+      <%= f.fields_for :steps do |builder| %>
+        <%= builder.label :name, "Step" %><br/>
+        <%= builder.text_area :name, :rows=>3 %>
+      <% end %>
+
   </div>
   <div class="field">
     <div class="control-group">
@@ -35,6 +35,7 @@
       </div>
     </div>
   </div>
+  <%= f.collection_select :program_id, Program.all, :id, :name, :prompt => true %>
   <div class="field">
     <div class="control-group">
       <%= f.label :documents, :class => 'control-label' %>
