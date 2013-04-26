@@ -83,7 +83,7 @@ class InstructionsController < ApplicationController
     @instruction.destroy
 
     respond_to do |format|
-      format.html { redirect_to instructions_url }
+      format.html { redirect_to programs_url }
       format.json { head :no_content }
     end
   end

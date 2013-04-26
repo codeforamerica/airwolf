@@ -4,6 +4,9 @@
 		<%= render 'form' %>
 	</div>
 </div>
+<div class="span6 offset1">
+	<%= link_to 'Delete', program_instructions_path, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+</div>
 
 <%= link_to 'Show', program_instruction_path %> |
 <%= link_to 'Back', program_instruction_path %>
