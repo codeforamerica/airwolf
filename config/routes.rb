@@ -1,27 +1,9 @@
 Helper::Application.routes.draw do
 
+  root :to => 'programs#index'
   resources :steps
 
-
-  resources :needs
-
-
-  # resources :programs
-
-
-  # resources :instructions
-
-
   resources :users
-
-
-  get "static_pages/home"
-
-  get "static_pages/help"
-
-  get "static_pages/about"
-
-  get "static_pages/contact"
 
   resources :programs do
     resources :instructions
