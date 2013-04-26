@@ -1,15 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @program.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @program.description %>
-</p>
-
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12 offset1">
+      <h2><%= link_to @program.name, @program, :class => 'step' %></h2>
+      <h5><%= @program.description %></h5>
+      <% a = Instruction.find_by_sql ["Select name, id from instructions where program_id = ?", @program.id] %>
+      <div>Learn about <%= @program.name %>
+        <ul class="unstyled">
+          <% a.each do |b|%>
+            <li><%= link_to b.name, program_instruction_path(@program.name, b.id) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_program_path(@program) %> |
 <%= link_to 'Back', programs_path %>

@@ -10,16 +10,23 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <div class="field">
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class=>'span5' %>
+      </div>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <div class="control-group">
+      <%= f.label :description, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :description, :class=>'span6', :rows=>4 %>
+      </div>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <div class="span3 offset6"><%= f.submit :class => 'btn btn-primary' %></div>
   </div>
 <% end %>
