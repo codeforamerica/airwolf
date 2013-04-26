@@ -25,6 +25,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/new.json
   def new
     @instruction = Instruction.new
+
     3.times do
       step = @instruction.steps.build
     end
@@ -44,10 +45,13 @@ class InstructionsController < ApplicationController
   # POST /instructions.json
   def create
     @instruction = Instruction.new(params[:instruction])
+    @program = Program.find(params[:program_id])
+    @i = program_instructions_path
+    binding.pry
 
     respond_to do |format|
       if @instruction.save
-        format.html { redirect_to @instruction, notice: 'Instruction was successfully created.' }
+        format.html { redirect_to programs_path, notice: 'Instruction was successfully created.' }
         format.json { render json: @instruction, status: :created, location: @instruction }
       else
         format.html { render action: "new" }
@@ -63,7 +67,7 @@ class InstructionsController < ApplicationController
 
     respond_to do |format|
       if @instruction.update_attributes(params[:instruction])
-        format.html { redirect_to program_instruction_path, notice: 'Instruction was successfully updated.' }
+        format.html { redirect_to programs_path, notice: 'Instruction was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

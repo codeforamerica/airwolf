@@ -24,7 +24,7 @@ Helper::Application.routes.draw do
   get "static_pages/contact"
 
   resources :programs do
-    resources :instructions, :path => 'instructions'
+    resources :instructions
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -16,13 +16,12 @@
     <td><%= instruction.name %></td>
     <td><%= instruction.description %></td>
     <td><%= instruction.documents %></td>
-    <td><%= link_to 'Show', program_instruction_path %></td>
-    <td><%= link_to 'Edit', edit_program_instruction_path(program, @instruction) %></td>
-    <td><%= link_to 'Destroy', program_instruction_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', program_instructions_path %></td>
+    <td><%= link_to 'Destroy', program_instructions_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Instruction', new_program_instruction %>
+<%= link_to 'New Instruction', new_program_instruction_path %>
