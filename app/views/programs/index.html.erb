@@ -1,8 +1,8 @@
 <div class="container-fluid">
+  <h1>All programs</h1>
+  <% @programs.each do |program| %>
   <div class="row-fluid">
-    <h1>All programs</h1>
     <div class="span12">
-      <% @programs.each do |program| %>
       <div class="span8 offset1">
         <h2><%= link_to program.name, program, :class => 'step' %></h2>
         <h5><%= program.description %></h5>
@@ -16,9 +16,9 @@
         </div>
         <%= link_to 'New instruction', new_program_instruction_path(program), :class => 'btn btn-inverse offset3' %>
       </div>    
-      <% end %>
     </div>
   </div>
+  <% end %>
   <div class="span8">
     <%= link_to 'New Program', new_program_path, :class => 'btn btn-primary' %>
   </div>
