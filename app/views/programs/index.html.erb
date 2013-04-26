@@ -1,20 +1,20 @@
-
-
 <div class="container-fluid">
   <div class="row-fluid">
     <h1>All programs</h1>
     <div class="span12">
       <% @programs.each do |program| %>
       <div class="span8 offset1">
-        <h2>Program name: <span><%= link_to program.name, program, :class => 'step' %></span></h2>
+        <h2><%= link_to program.name, program, :class => 'step' %></h2>
         <h5><%= program.description %></h5>
-        <% a = Instruction.find program.instruction_id %>
-        <h5><%= link_to a.name, program_instruction_path(program, program.instruction_id) %></h5>
+        <% a = Instruction.find_by_sql ["Select name, id from instructions where program_id = ?", program.id] %>
+        <div>Learn about <%= program.name %>
+          <ul class="unstyled">
+            <% a.each do |b|%>
+              <li><%= link_to b.name, program_instruction_path(program.name, b.id) %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>    
-
-<!--       <td><%= link_to 'Show', program %></td>
-      <td><%= link_to 'Edit', edit_program_path(program) %></td>
-      <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       <% end %>
     </div>
   </div>
