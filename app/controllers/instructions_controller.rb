@@ -47,7 +47,6 @@ class InstructionsController < ApplicationController
     @instruction = Instruction.new(params[:instruction])
     @program = Program.find(params[:program_id])
     @i = program_instructions_path
-    binding.pry
 
     respond_to do |format|
       if @instruction.save
