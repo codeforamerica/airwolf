@@ -10,7 +10,7 @@
         <div>Learn about <%= program.name %>
           <ul class="unstyled">
             <% a.each do |b|%>
-              <li><%= link_to b.name, program_instruction_path(program.name, b.id) %></li>
+              <li><%= link_to b.name, program_instruction_path(program.id, b.id) %></li>
             <% end %>
           </ul>
         </div>

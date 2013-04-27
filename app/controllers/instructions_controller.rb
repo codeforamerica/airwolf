@@ -14,6 +14,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/1.json
   def show
     @instruction = Instruction.find(params[:id])
+    @program = Program.find(params[:program_id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +26,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/new.json
   def new
     @instruction = Instruction.new
+    @program = Program.find(params[:program_id])
 
     3.times do
       step = @instruction.steps.build
@@ -39,6 +41,7 @@ class InstructionsController < ApplicationController
   # GET /instructions/1/edit
   def edit
     @instruction = Instruction.find(params[:id])
+    @program = Program.find(params[:program_id])
   end
 
   # POST /instructions
@@ -46,7 +49,6 @@ class InstructionsController < ApplicationController
   def create
     @instruction = Instruction.new(params[:instruction])
     @program = Program.find(params[:program_id])
-    @i = program_instructions_path
 
     respond_to do |format|
       if @instruction.save
@@ -63,10 +65,11 @@ class InstructionsController < ApplicationController
   # PUT /instructions/1.json
   def update
     @instruction = Instruction.find(params[:id])
+    @program = Program.find(params[:program_id])
 
     respond_to do |format|
       if @instruction.update_attributes(params[:instruction])
-        format.html { redirect_to programs_path, notice: 'Instruction was successfully updated.' }
+        format.html { redirect_to programs_url, notice: 'Instruction was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
