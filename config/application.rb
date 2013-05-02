@@ -60,11 +60,13 @@ module Helper
     config.assets.version = '1.0'
     
     config.middleware.use Rack::Cors do
-        allow do
-          origins '*'
-          resource '*', :headers => :any, :methods => [:get, :post, :options]
-        end
+      allow do
+        origins '*'
+        resource %r{/users/\d+.json},
+          :headers => ['Origin', 'Accept', 'Content-Type'],
+          :methods => [:get, :post]
       end
+    end
   end
 end
 
