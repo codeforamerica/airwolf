@@ -260,6 +260,15 @@
   <script>
   $('#navbarExample>ul>li').removeClass('active');
   	$(function() {
+  		var helperAPI = "http://sfairwolf.herokuapp.com/programs/1/instructions/1.json?jsoncallback=?";
+		  $.getJSON( helperAPI, {
+		    format: "json"
+		  })
+		  .done(function( json ) {
+		    console.log(json);
+		  });
+
+
 	  	$('#navbarExample').scrollspy()
 			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
 	    var $sidebar   = $("#navbarExample"), 
