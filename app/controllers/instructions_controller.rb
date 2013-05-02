@@ -18,7 +18,7 @@ class InstructionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => {:instruction => @instruction, :steps => @instruction.steps.each_with_index}}
+      format.json { render :json => {:instruction => @instruction, :steps => @instruction.steps.each_with_index, :callback => params[:callback]}}
     end
   end
 
