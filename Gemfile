@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'friendly_id'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development do
   gem 'pry'
