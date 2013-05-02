@@ -1,7 +1,7 @@
 <% a = Program.find @instruction.program_id %>
 
 <%= render 'topnav' %>
-<div class="container-fluid">
+<div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
   <div class="row-fluid">
     <div class="span12 hero-unit">
       <h1><%= @instruction.name %></h1>

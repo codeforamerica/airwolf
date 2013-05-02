@@ -1,5 +1,6 @@
 $(function() {
-  		// $("[rel='popover']").popover();
+
+	$('#spy').scrollspy('refresh');
   		$('.nav li a').click(function(){
   			activeStyle($(this).attr('href'));
   		});
@@ -43,7 +44,7 @@ $(function() {
   	$(activeEl+' h2').css('color','#444');
   	$(activeEl+' .span8').css({
   		'border-left':'6px solid #399fd3'
-  	});
+  	}); 
 	}
 
 
