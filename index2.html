@@ -57,14 +57,12 @@
 		
   </body>
   <script>
-  $('#navbarExample>ul>li').removeClass('active');
   	$(function() {
   		var helperAPI = "http://sfairwolf.herokuapp.com/programs/1/instructions/1.json";
 		  $.getJSON( helperAPI, {
 		    format: "json"
 		  })
 		  .done(function( json ) {
-		    // console.log(json);
 		    var template = $('#instruction').html();
 		    var html = Mustache.to_html(template, json);
 		    $('#titleArea').html(html);
@@ -74,38 +72,13 @@
 		    	var templateNav = $('#navigation').html()
 		    	step['index'] = []
 		    	step['index'].push(niceNumber);
-		    	console.log(step);
 			    var htmlSteps = Mustache.to_html(templateSteps, step);
 			    var navHtml = Mustache.to_html(templateNav, step);
 			    $('ul.nav').append(navHtml);
 			    $('#stepArea').append(htmlSteps);
-		    	// $('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
 		    })
 		  });
 
-	  	$('#navbarExample').scrollspy()
-			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
-	    var $sidebar   = $("#navbarExample"), 
-	        $window    = $(window),
-	        offset     = $sidebar.offset(),
-	        topPadding = 5;
-
-	    $window.scroll(function() {
-	      if ($window.scrollTop() > offset.top) {
-	          $sidebar.stop().animate({
-	              marginTop: $window.scrollTop() - offset.top + topPadding
-	          });
-	      } else {
-	          $sidebar.stop().animate({
-	              marginTop: 0
-	          });
-	      }
-	    });
-	    //a dumb little function to update the active class when a user clicks a nav button
-	    $('#navbarExample>ul>li>a').click(function(){
-				$('#navbarExample>ul>li').removeClass('active');
-	    	$(this).parent('li').addClass('active');
-	    });
 		});
   </script>
   <script>
