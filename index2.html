@@ -10,12 +10,28 @@
 	  <!--[if IE]>
 	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <![endif]-->
-	    <script id="personTpl" type="text/template">
-				{{#instruction}}
-					<h1>{{name}}</h1>
-				{{/instruction}}
+	    <script id="instruction" type="text/template">
+	     <div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
+				  <div class="row-fluid">
+				    <div class="span12 hero-unit">
+				    	<div id="sampleArea"></div>
+								{{#instruction}}
+									<h1>{{name}}</h1>
+									<p>{{description}}</p>
+								{{/instruction}}
+				    </div>
+			    </div>
+		    </div>
+		    </script>
+		    <script id="steps" type="text/template">
+			    <div id="step" class="row-fluid stepRow">
+			    	<div class="offset1 spacer"><div class="span8">
+			    		<h2><span class="step">Step:</span> {{name}}</h2>
+			    			<p>{{description}}</p>
+			    		</div>
+			    	</div>
+			    </div>
 			</script>
-	  
   </head>
   <body>
   	<div class="navbar">
@@ -43,11 +59,12 @@
 		    <div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
 				  <div class="row-fluid">
 				    <div class="span12 hero-unit">
-				    	<div id="sampleArea"></div>
+				    	<div id="titleArea"></div>
 				    	<!-- instruction name and description go here -->
 				    </div>
 			    </div>
 		    </div>
+		    <div id="stepArea"></div>
 		
   </body>
   <script>
@@ -59,13 +76,15 @@
 		  })
 		  .done(function( json ) {
 		    console.log(json);
-		    var template = $('#personTpl').html();
+		    var template = $('#instruction').html();
 		    var html = Mustache.to_html(template, json);
-		    $('#sampleArea').html(html);
-		    $('.hero-unit').append('<h1>'+json.instruction.name+'</h1><p>'+json.instruction.description+'</p>')
+		    $('#titleArea').html(html);
 		    $.each(json.steps, function(index, step){
 		    	var niceNumber = index +1;
-		    	$('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
+		    	var templateSteps = $('#step').html();
+			    var htmlSteps = Mustache.to_html(templateSteps, step);
+			    $('#stepArea').html(htmlSteps);
+		    	// $('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
 		    })
 		  });
 
