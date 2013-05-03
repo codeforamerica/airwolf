@@ -33,42 +33,27 @@
 			    </div>
 			</script>
 			<script id="navigation" type="text/template">
-				  <div class="navbar-inner subnav navbar-inverse">
-				    <a class="brand" href="index2.html">CalFresh Helper</a>
-				    <ul class="nav navbar-inverse">
-				    <li><a href="#step{{index}}">Step {{index}} {{name}}</a></li>
-				    </ul>
-				  </div>
+		    <li><a href="#step{{index}}">Step {{index}} {{name}}</a></li>
 			</script>
   </head>
   <body>
-		<div id="navbar" class="navbar navbar-inverse"></div><!-- end nav-bar-->
-		<div class="container-fluid">
+  	<div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
 		  <div class="row-fluid">
-		    <div class="span2">
-		      <!--Sidebar content-->
-		      <div class="well-special fixed">
-						<div id="navbarExample" class="subnav">
-		        	<ul class="nav nav-pills">
-		        		<li class="active"><a href="#step1">Step 1 Prepare</a></li>
-								<li><a href="#step2">Step 2 Apply</a></li>
-						    <li><a href="#step3">Step 3 Email documents</a></li>
-						    <li><a href="#step4">Step 4 Interview</a></li>
-						    <li><a href="#next">What's next?</a></li>
-						    <li><a href="#questions">Questions</a></li>
-			        </ul>
-			    	</div>
-					</div>
+				<div id="navbar" class="navbar navbar-inverse">
+					<div class="navbar-inner subnav navbar-inverse">
+					  <a class="brand" href="index2.html">CalFresh Helper</a>
+						 <ul class="nav navbar-inverse"></ul>
+				  </div>
+				</div><!-- end nav-bar-->
+			</div>
+		  <div class="row-fluid">
+		    <div class="span12 hero-unit">
+		    	<div id="titleArea"></div>
+		    	<!-- instruction name and description go here -->
 		    </div>
-		    <div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
-				  <div class="row-fluid">
-				    <div class="span12 hero-unit">
-				    	<div id="titleArea"></div>
-				    	<!-- instruction name and description go here -->
-				    </div>
-			    </div>
-		    </div>
-		    <div id="stepArea"></div>
+	    </div>
+	    <div id="stepArea"></div>
+    </div>
 		
   </body>
   <script>
@@ -92,7 +77,7 @@
 		    	console.log(step);
 			    var htmlSteps = Mustache.to_html(templateSteps, step);
 			    var navHtml = Mustache.to_html(templateNav, step);
-			    $('#navbar').append(navHtml);
+			    $('ul.nav').append(navHtml);
 			    $('#stepArea').append(htmlSteps);
 		    	// $('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
 		    })
