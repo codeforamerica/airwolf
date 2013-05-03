@@ -10,6 +10,12 @@
 	  <!--[if IE]>
 	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  <![endif]-->
+	    <script id="personTpl" type="text/template">
+				{{#instruction}}
+					<h1>{{name}}</h1>
+				{{/instruction}}
+			</script>
+	  
   </head>
   <body>
   	<div class="navbar">
@@ -37,17 +43,13 @@
 		    <div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
 				  <div class="row-fluid">
 				    <div class="span12 hero-unit">
+				    	<div id="sampleArea"></div>
 				    	<!-- instruction name and description go here -->
 				    </div>
 			    </div>
 		    </div>
 		
   </body>
-  <script id="personTpl" type="text/template">
-		{{#instruction}}
-			<h1>{{name}}</h1>
-		{{/instruction}}
-	</script>
   <script>
   $('#navbarExample>ul>li').removeClass('active');
   	$(function() {
@@ -66,7 +68,6 @@
 		    	$('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
 		    })
 		  });
-
 
 	  	$('#navbarExample').scrollspy()
 			// fix the left nav box. from http://css-tricks.com/scrollfollow-sidebar/
