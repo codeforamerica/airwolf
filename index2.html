@@ -24,6 +24,7 @@
 		    </div>
 		    </script>
 		    <script id="step" type="text/template">
+		    {{niceNumber}}
 			    <div id="step" class="row-fluid stepRow">
 			    	<div class="offset1 spacer"><div class="span8">
 			    		<h2><span class="step">Step:</span> {{0.name}}</h2>
@@ -82,6 +83,7 @@
 		    $.each(json.steps, function(index, step){
 		    	var niceNumber = index +1;
 		    	var templateSteps = $('#step').html();
+		    	step.push(niceNumber);
 			    var htmlSteps = Mustache.to_html(templateSteps, step);
 			    $('#stepArea').append(htmlSteps);
 		    	// $('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
