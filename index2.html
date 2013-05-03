@@ -87,6 +87,7 @@
 		    	var niceNumber = index +1;
 		    	var templateSteps = $('#step').html();
 		    	var templateNav = $('#navigation').html()
+		    	step['index'] = []
 		    	step['index'].push(niceNumber);
 		    	console.log(step);
 			    var htmlSteps = Mustache.to_html(templateSteps, step);
