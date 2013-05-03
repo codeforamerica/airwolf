@@ -24,21 +24,25 @@
 		    </div>
 		    </script>
 		    <script id="step" type="text/template">
-			    <div id="step{{2}}" class="row-fluid stepRow">
+			    <div id="step{{index}}" class="row-fluid stepRow">
 			    	<div class="offset1 spacer"><div class="span8">
-			    		<h2><span class="step">Step {{2}}:</span> {{0.name}}</h2>
+			    		<h2><span class="step">Step {{index}}:</span> {{0.name}}</h2>
 			    			<p>{{0.description}}</p>
 			    		</div>
 			    	</div>
 			    </div>
 			</script>
+			<script id="navigation" type="text/template">
+				  <div class="navbar-inner subnav navbar-inverse">
+				    <a class="brand" href="index2.html">CalFresh Helper</a>
+				    <ul class="nav navbar-inverse">
+				    <li><a href="#step{{index}}">Step {{index}} {{name}}</a></li>
+				    </ul>
+				  </div>
+			</script>
   </head>
   <body>
-  	<div class="navbar">
-		  <div class="navbar-inner">
-		    <a class="brand" href="index.html">CalFresh helper</a>
-		  </div>
-		</div><!-- end nav-bar-->
+		<div id="navbar" class="navbar navbar-inverse"></div><!-- end nav-bar-->
 		<div class="container-fluid">
 		  <div class="row-fluid">
 		    <div class="span2">
@@ -82,9 +86,12 @@
 		    $.each(json.steps, function(index, step){
 		    	var niceNumber = index +1;
 		    	var templateSteps = $('#step').html();
-		    	step.push(niceNumber);
+		    	var templateNav = $('#navigation').html()
+		    	step['index'].push(niceNumber);
 		    	console.log(step);
 			    var htmlSteps = Mustache.to_html(templateSteps, step);
+			    var navHtml = Mustache.to_html(templateNav, step);
+			    $('#navbar').append(navHtml);
 			    $('#stepArea').append(htmlSteps);
 		    	// $('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
 		    })
