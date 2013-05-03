@@ -276,7 +276,7 @@
 		    $('.hero-unit').append('<h1>'+json.instruction.name+'</h1><p>'+json.instruction.description+'</p>')
 		    $.each(json.steps, function(index, step){
 		    	var niceNumber = index +1;
-		    	$('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[index].name+'</h2><p>'+step[index].description+'</p></div></div></div>');
+		    	$('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
 		    })
 		  });
 
