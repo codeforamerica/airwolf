@@ -62,7 +62,7 @@ module Helper
     config.middleware.use Rack::Cors do
       allow do
         origins 'codeforamerica.github.io'
-        resource '%r{/programs/*\d+.json},',
+        resource '*',
           :headers => ['Origin', 'Accept', 'Content-Type'],
           :methods => [:get]
       end
