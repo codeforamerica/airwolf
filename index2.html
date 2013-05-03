@@ -76,7 +76,7 @@
 		    format: "json"
 		  })
 		  .done(function( json ) {
-		    console.log(json);
+		    // console.log(json);
 		    var template = $('#instruction').html();
 		    var html = Mustache.to_html(template, json);
 		    $('#titleArea').html(html);
@@ -84,6 +84,7 @@
 		    	var niceNumber = index +1;
 		    	var templateSteps = $('#step').html();
 		    	step.push(niceNumber);
+		    	console.log(step);
 			    var htmlSteps = Mustache.to_html(templateSteps, step);
 			    $('#stepArea').append(htmlSteps);
 		    	// $('#spy').append('<div id="step'+niceNumber+'" class="row-fluid stepRow"><div class="offset1 spacer"><div class="span8"><h2><span class="step">Step'+niceNumber+':</span> '+step[0].name+'</h2><p>'+step[0].description+'</p></div></div></div>');
