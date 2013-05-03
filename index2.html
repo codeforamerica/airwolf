@@ -33,6 +33,13 @@
 			    	</div>
 					</div>
 		    </div>
+		    <div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
+				  <div class="row-fluid">
+				    <div class="span12 hero-unit">
+				    	
+				    </div>
+			    </div>
+		    </div>
 		    <div class="span6" data-spy="scroll" data-target="#navbarExample" data-offset="0">
 		    	<div class="well" id="step1">
 	          <h2>Step 1: Prepare</h2>
@@ -266,6 +273,7 @@
 		  })
 		  .done(function( json ) {
 		    console.log(json);
+		    $('.hero-unit').append('<h1>'+json.instruction.name+'</h1><p>'+json.instruction.description+'</p>')
 		  });
 
 
