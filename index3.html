@@ -55,7 +55,7 @@
 		    // var html = Mustache.to_html(template, json);
 		    console.log(json.data);
 		    // $('#titleArea').html(html);
-		    $.each(json.data[5], function(index, zip){
+		    $.each(json.data, function(index, zip){
 		    	// var niceNumber = index +1;
 		    	// var templateSteps = $('#step').html();
 		    	// var templateNav = $('#navigation').html()
@@ -64,7 +64,7 @@
 			    // var htmlSteps = Mustache.to_html(templateSteps, step);
 			    // var navHtml = Mustache.to_html(templateNav, step);
 			    // $('ul.nav').append(navHtml);
-			    $('#test').append(zip);
+			    $('#test').append(zip[5]);
 		    })
 		  });
 		});
