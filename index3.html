@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/mustache.js"></script>
+	  <link href="css/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+	  <link href="css/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<link href="css/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <!--[if IE]>
+	      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <![endif]-->
+	    <script id="instruction" type="text/template">
+	     <div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
+				  <div class="row-fluid">
+				    <div class="span12 hero-unit">
+				    	<div id="sampleArea"></div>
+								{{#instruction}}
+									<h1>{{name}}</h1>
+									<p>{{{description}}}</p>
+								{{/instruction}}
+				    </div>
+			    </div>
+		    </div>
+		    </script>
+		    <script id="step" type="text/template">
+			    <div id="step{{index}}" class="row-fluid stepRow">
+			    	<div class="offset1 spacer"><div class="span8">
+			    		<h2><span class="step">Step {{index}}:</span> {{0.name}}</h2>
+			    			<p>{{{0.description}}}</p>
+			    		</div>
+			    	</div>
+			    </div>
+			</script>
+			<script id="navigation" type="text/template">
+		    <li><a href="#step{{index}}">Step {{index}} {{0.name}}</a></li>
+			</script>
+  </head>
+  <body>
+  	<div id="spy" class="container-fluid" data-spy="scroll" data-target="#navbar" data-offset="200">
+		  <div class="row-fluid">
+				<div id="navbar" class="navbar navbar-inverse">
+					<div class="navbar-inner subnav navbar-inverse">
+					  <a class="brand" href="index2.html">CalFresh Helper</a>
+						 <ul class="nav navbar-inverse"></ul>
+				  </div>
+				</div><!-- end nav-bar-->
+			</div>
+		  <div class="row-fluid">
+		    <div class="span12 hero-unit">
+		    	<div id="titleArea"></div>
+		    	<!-- instruction name and description go here -->
+		    </div>
+	    </div>
+	    <div id="stepArea"></div>
+    </div>
+		
+  </body>
+  <script>
+  	$(function() {
+  		var helperAPI = "https://data.consumerfinance.gov/api/views/e4ie-ajsp/rows.json?search=541";
+		  $.getJSON( helperAPI, {
+		    format: "json"
+		  })
+		  .done(function( json ) {
+		    // var template = $('#instruction').html();
+		    var html = Mustache.to_html(template, json);
+		    console.log(json);
+		    // $('#titleArea').html(html);
+		    // $.each(json.steps, function(index, step){
+		    // 	var niceNumber = index +1;
+		    // 	var templateSteps = $('#step').html();
+		    // 	var templateNav = $('#navigation').html()
+		    // 	step['index'] = []
+		    // 	step['index'].push(niceNumber);
+			   //  var htmlSteps = Mustache.to_html(templateSteps, step);
+			   //  var navHtml = Mustache.to_html(templateNav, step);
+			   //  $('ul.nav').append(navHtml);
+			   //  $('#stepArea').append(htmlSteps);
+		    // })
+		  });
+		});
+  </script>
+
+</html>
