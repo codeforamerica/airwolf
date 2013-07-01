@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Helper::Application.load_tasks
+Airwolf::Application.load_tasks

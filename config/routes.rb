@@ -1,4 +1,4 @@
-Helper::Application.routes.draw do
+Airwolf::Application.routes.draw do
 
   root :to => 'programs#index'
   resources :steps

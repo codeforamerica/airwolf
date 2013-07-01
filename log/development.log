@@ -29394,3 +29394,21 @@ Served asset /helper.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-02 14:43:24 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130423032353)
+Migrating to CreateInstructions (20130423032453)
+Migrating to CreatePrograms (20130423032814)
+Migrating to CreateNeeds (20130423212633)
+Migrating to AddColunumDocsToInstructions (20130423214635)
+Migrating to AddProgramIdToInstruction (20130424163450)
+Migrating to CreateSteps (20130424205904)
+Migrating to AddInstructionIdToSteps (20130424211933)
+Migrating to AddDocsIdToSteps (20130425003824)
+Migrating to AddInstructionIdToProgram (20130425222659)
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
